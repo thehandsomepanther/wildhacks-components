@@ -1,0 +1,75 @@
+@font-face {
+  font-family: Circular;
+  src: url(../fonts/CircularStd-Bold.otf);
+  font-weight: bold; }
+* {
+  padding: 0 0 0 0;
+  font-family: Circular;
+  color: #0033cc; }
+
+#application-container {
+  margin-left: 15vw; }
+
+h1 {
+  font-size: 3em;
+  line-height: .5em; }
+
+h1,
+h4 {
+  text-align: center; }
+
+form div label {
+  display: inline-block;
+  text-align: right;
+  margin-right: 1vw; }
+
+label,
+input,
+select option {
+  font-size: 3em; }
+
+input {
+  border: none;
+  border-bottom: 8px solid #bbb;
+  transition: all .1s linear; }
+
+input:hover,
+input:focus {
+  border-bottom: 8px solid #0033cc; }
+
+input,
+select {
+  margin-left: 1vw; }
+
+label,
+input,
+select {
+  width: 34vw; }
+
+#first-name {
+  margin-right: 2vw; }
+
+#first-name,
+#last-name {
+  width: 16vw; }
+
+#last-name {
+  margin-left: 0; }
+
+button {
+  font-size: 2em;
+  background: none;
+  border: 0;
+  border: 8px solid #0033cc;
+  padding: 10px;
+  margin-top: 20px;
+  transition: all .1s linear;
+  display: table;
+  width: 70vw; }
+
+button:hover {
+  background: #0033cc;
+  color: white;
+  cursor: pointer; }
+
+/*# sourceMappingURL=apply.css.map */

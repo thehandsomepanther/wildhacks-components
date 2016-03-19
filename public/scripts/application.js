@@ -62,7 +62,7 @@ var Application = React.createClass({
     return (
       <form onSubmit={this.handleSubmit}>
         <div>
-          <label htmlFor='name'>My name is</label>
+          <label htmlFor='first-name'>My name is</label>
           <input
             id='first-name'
             type='text'
