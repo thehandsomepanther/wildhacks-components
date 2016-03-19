@@ -1,0 +1,29 @@
+* {
+  padding: 0 0 0 0;
+}
+
+#application-container {
+  margin-left: 15%;
+}
+
+h1,
+h4 {
+  text-align: center;
+}
+
+form div label {
+  display: inline-block;
+  text-align: right;
+  margin-right: 1%;
+}
+
+input,
+select {
+  margin-left: 1%;
+}
+
+label,
+input,
+select {
+    width: 35%;
+}
