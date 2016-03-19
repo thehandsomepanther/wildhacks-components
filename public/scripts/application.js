@@ -62,27 +62,24 @@ var Application = React.createClass({
     return (
       <form onSubmit={this.handleSubmit}>
         <div>
-          <label htmlFor='first-name'>First Name</label>
+          <label htmlFor='name'>My name is</label>
           <input
             id='first-name'
             type='text'
-            placeholder='First Name'
+            placeholder='First'
             value={this.state.firstName}
             onChange={this.handleFirstNameChange}
             required></input>
-        </div>
-        <div>
-          <label htmlFor='last-name'>Last Name</label>
           <input
             id='last-name'
             type='text'
-            placeholder='Last Name'
+            placeholder='Last'
             value={this.state.lastName}
             onChange={this.handleLastNameChange}
             required></input>
         </div>
         <div>
-          <label htmlFor='year'>Year</label>
+          <label htmlFor='year'>And I&rsquo;m a</label>
           <select
             id='year'
             value={this.state.year}
@@ -97,7 +94,7 @@ var Application = React.createClass({
           </select>
         </div>
         <div>
-          <label htmlFor='school'>School</label>
+          <label htmlFor='school'>at</label>
           <input
             id='school'
             type='text'
@@ -107,7 +104,7 @@ var Application = React.createClass({
             required></input>
         </div>
         <div>
-          <label htmlFor='email'>Email</label>
+          <label htmlFor='email'>My email is</label>
           <input
             id='email'
             type='email'
@@ -116,7 +113,7 @@ var Application = React.createClass({
             onChange={this.handleEmailChange}
             required></input>
         </div>
-        <input value='And thats all I have to say about that' type='submit'></input>
+        <button type='submit'>And that&rsquo;s all I have to say about that</button>
       </form>
     );
   }
