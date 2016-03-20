@@ -21,6 +21,10 @@ app.get('/apply', function(req, res) {
   res.sendFile(__dirname + "/public/apply.html");
 });
 
+app.get('/login', function(req, res) {
+  res.sendFile(__dirname + "/public/login.html");
+});
+
 app.get('/api/applications', function(req, res) {
   fs.readFile(APPS_FILE, function(err, data) {
     if(err) {

@@ -1,3 +1,58 @@
+var DropdownItem = React.createClass({
+  render: function() {
+
+  }
+});
+
+var DropdownList = React.createClass({
+  render: function() {
+
+  }
+});
+
+var Dropdown = React.createClass({
+  getInitialState: function() {
+    return {};
+  },
+  handleChange: function() {
+    return;
+  },
+  render: function() {
+    var items = ['1', '2', '3', '4']
+
+    var list = items.map(function(item, i) {
+      return (
+          <div style={{
+            position: 'absolute',
+            width: 'inherit'
+          }} key={i}>{item}</div>
+      )
+    });
+
+    var divstyles = {
+      display: 'inline'
+    }
+
+    return (
+      <div
+        className='dropdown'
+        style={{display: 'inline-block'}}>
+        <input
+          id={this.props.id}
+          type={this.props.type}
+          placeholder={this.props.placeholder}
+          value={this.state.value}
+          onChange={this.handleChange}
+          style={{
+            width: 'inherit'
+          }}
+        ></input>
+        {list}
+      </div>
+    );
+  }
+});
+
 var Application = React.createClass({
   getInitialState: function() {
     return {
@@ -105,13 +160,13 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='email'>My email is</label>
-          <input
+          <Dropdown
             id='email'
             type='email'
             placeholder='Email'
             value={this.state.email}
             onChange={this.handleEmailChange}
-            required></input>
+            required/>
         </div>
         <button type='submit'>And that&rsquo;s all I have to say about that</button>
       </form>
