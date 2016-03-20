@@ -1,12 +1,29 @@
 var DropdownItem = React.createClass({
   render: function() {
-
+    return (
+        <div>{this.props.item}</div>
+    )
   }
 });
 
 var DropdownList = React.createClass({
+  getInitialState: function() {
+    return {};
+  },
   render: function() {
+    var list = this.props.list.map(function(item, i) {
+      return <DropdownItem key={i} item={item} />
+    });
 
+    return (
+      <div
+        style={{
+          position: 'absolute',
+          width: 'inherit'
+        }}>
+        {list}
+      </div>
+    );
   }
 });
 
@@ -17,21 +34,11 @@ var Dropdown = React.createClass({
   handleChange: function() {
     return;
   },
+  handleClick: function() {
+    return;
+  },
   render: function() {
-    var items = ['1', '2', '3', '4']
-
-    var list = items.map(function(item, i) {
-      return (
-          <div style={{
-            position: 'absolute',
-            width: 'inherit'
-          }} key={i}>{item}</div>
-      )
-    });
-
-    var divstyles = {
-      display: 'inline'
-    }
+    var list = ['1', '2', '3', '4'];
 
     return (
       <div
@@ -39,15 +46,15 @@ var Dropdown = React.createClass({
         style={{display: 'inline-block'}}>
         <input
           id={this.props.id}
+          className='dropdown-input'
           type={this.props.type}
           placeholder={this.props.placeholder}
           value={this.state.value}
           onChange={this.handleChange}
-          style={{
-            width: 'inherit'
-          }}
+          onClick={this.handleClick}
+          style={{width: 'inherit'}}
         ></input>
-        {list}
+        <DropdownList list={list}/>
       </div>
     );
   }
