@@ -1,7 +1,35 @@
 var DropdownItem = React.createClass({
+  getInitialState: function() {
+    return {
+      focus: false,
+      value: this.props.value
+    };
+  },
+  handleMouseOver: function() {
+    this.setState({focus: true});
+    return;
+  },
+  handleMouseLeave: function() {
+    this.setState({focus: false});
+    return;
+  },
   render: function() {
+    var background = this.state.focus ? "blue" : "white";
+
     return (
-        <div>{this.props.item}</div>
+        <li
+          className='dropdown-item'
+          onMouseOver={this.handleMouseOver}
+          onMouseLeave={this.handleMouseLeave}
+          onClick={this.props.onClick}
+          id={this.props.id}
+          style={{
+            backgroundColor: background,
+            listStyle: "none",
+            paddingLeft: "10px"
+          }}>
+          {this.props.item}
+        </li>
     )
   }
 });
@@ -11,34 +39,70 @@ var DropdownList = React.createClass({
     return {};
   },
   render: function() {
+    var itemClick = this.props.onClick;
+
     var list = this.props.list.map(function(item, i) {
-      return <DropdownItem key={i} item={item} />
+      return <DropdownItem
+                key={i}
+                item={item.text}
+                id={item.value}
+                onClick={itemClick} />
     });
 
+    var show = this.props.display ? "block" : "none";
     return (
-      <div
+      <ul
+        className='dropdown-list'
         style={{
           position: 'absolute',
-          width: 'inherit'
+          width: 'inherit',
+          backgroundColor: 'white',
+          overflow: 'scroll',
+          height: '100px',
+          marginTop: "0",
+          display: show
         }}>
         {list}
-      </div>
+      </ul>
     );
   }
 });
 
 var Dropdown = React.createClass({
   getInitialState: function() {
-    return {};
+    return {
+      focus: false,
+      selectedItem: 0
+    };
   },
-  handleChange: function() {
+  handleFocus: function() {
+    this.setState({focus: true});
     return;
   },
-  handleClick: function() {
+  handleBlur: function() {
+    this.setState({focus: false});
+    return;
+  },
+  handleFocus: function() {
+    this.setState({focus: true});
+    return;
+  },
+  handleBlur: function() {
+    this.setState({focus: false});
+    return;
+  },
+  handleDropdownListClick: function(e) {
+    this.setState({value: e.target.innerHTML});
+    this.props.onChange(e);
     return;
   },
   render: function() {
-    var list = ['1', '2', '3', '4'];
+    var list = [
+      {text: "freshman", value: 2020},
+      {text: "sophomore", value: 2019},
+      {text: "junior", value: 2018},
+      {text: "senior", value: 2017}
+    ];
 
     return (
       <div
@@ -50,11 +114,18 @@ var Dropdown = React.createClass({
           type={this.props.type}
           placeholder={this.props.placeholder}
           value={this.state.value}
-          onChange={this.handleChange}
+          onChange={this.props.onChange}
           onClick={this.handleClick}
+          onFocus={this.handleFocus}
+          // onBlur={this.handleBlur}
+          onTouchStart={this.handleFocus}
+          onTouchEnd={this.handleBlur}
           style={{width: 'inherit'}}
         ></input>
-        <DropdownList list={list}/>
+        <DropdownList
+          list={list}
+          display={this.state.focus}
+          onClick={this.handleDropdownListClick}/>
       </div>
     );
   }
@@ -142,18 +213,13 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='year'>And I&rsquo;m a</label>
-          <select
+          <Dropdown
             id='year'
+            type='text'
+            placeholder='Year'
             value={this.state.year}
             onChange={this.handleYearChange}
-            required>
-            <option value=''>year</option>
-            <option value='2020'>freshman</option>
-            <option value='2019'>sophomore</option>
-            <option value='2018'>junior</option>
-            <option value='2017'>senior</option>
-            <option value='other'>other</option>
-          </select>
+            required/>
         </div>
         <div>
           <label htmlFor='school'>at</label>
@@ -167,13 +233,13 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='email'>My email is</label>
-          <Dropdown
+          <input
             id='email'
             type='email'
             placeholder='Email'
             value={this.state.email}
             onChange={this.handleEmailChange}
-            required/>
+            required></input>
         </div>
         <button type='submit'>And that&rsquo;s all I have to say about that</button>
       </form>
