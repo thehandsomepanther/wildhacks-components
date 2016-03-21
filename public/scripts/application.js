@@ -1,8 +1,7 @@
 var DropdownItem = React.createClass({
   getInitialState: function() {
     return {
-      focus: false,
-      value: this.props.value
+      focus: false
     };
   },
   handleMouseOver: function() {
@@ -22,13 +21,13 @@ var DropdownItem = React.createClass({
           onMouseOver={this.handleMouseOver}
           onMouseLeave={this.handleMouseLeave}
           onClick={this.props.onClick}
-          id={this.props.id}
+          value={this.props.value}
           style={{
             backgroundColor: background,
             listStyle: "none",
             paddingLeft: "10px"
           }}>
-          {this.props.item}
+          {this.props.text}
         </li>
     )
   }
@@ -44,8 +43,8 @@ var DropdownList = React.createClass({
     var list = this.props.list.map(function(item, i) {
       return <DropdownItem
                 key={i}
-                item={item.text}
-                id={item.value}
+                text={item.text}
+                value={item.value}
                 onClick={itemClick} />
     });
 
@@ -58,7 +57,7 @@ var DropdownList = React.createClass({
           width: 'inherit',
           backgroundColor: 'white',
           overflow: 'scroll',
-          height: '100px',
+          height: '60px',
           marginTop: "0",
           display: show
         }}>
@@ -74,6 +73,19 @@ var Dropdown = React.createClass({
       focus: false,
       selectedItem: 0
     };
+  },
+  componentDidMount: function() {
+    document.addEventListener("click", this.documentClickHandler);
+  },
+  componentWillUnmount: function() {
+    document.removeEventListener("click", this.documentClickHandler);
+  },
+  documentClickHandler: function() {
+    console.log('asd')
+    this.setState({focus: false});
+  },
+  handleClick: function(e) {
+    e.nativeEvent.stopImmediatePropagation();
   },
   handleFocus: function() {
     this.setState({focus: true});
@@ -92,7 +104,7 @@ var Dropdown = React.createClass({
     return;
   },
   handleDropdownListClick: function(e) {
-    this.setState({value: e.target.innerHTML});
+    this.setState({value: e.target.value});
     this.props.onChange(e);
     return;
   },

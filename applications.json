@@ -38,5 +38,13 @@
         "year": "0",
         "school": "asdf",
         "email": "asdf"
+    },
+    {
+        "id": 1458584599768,
+        "firstName": "",
+        "lastName": "",
+        "year": "freshman",
+        "school": "",
+        "email": ""
     }
 ]
