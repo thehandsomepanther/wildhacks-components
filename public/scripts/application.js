@@ -1,12 +1,3 @@
-var years = [
-  {value: "freshman", alias: "2020"},
-  {value: "sophomore", alias: "2019"},
-  {value: "junior", alias: "2018"},
-  {value: "senior", alias: "2017"},
-  {value: "grad student", alias: "other"},
-  {value: "high schooler", alias: "other"},
-];
-
 var DropdownItem = React.createClass({
   getInitialState: function() {
     return {
@@ -262,13 +253,14 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='school'>at</label>
-          <input
+          <Dropdown
             id='school'
             type='text'
             placeholder='School'
             value={this.state.school}
             onChange={this.handleSchoolChange}
-            required></input>
+            options={colleges}
+            required/>
         </div>
         <div>
           <label htmlFor='email'>My email is</label>
