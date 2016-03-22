@@ -21,13 +21,13 @@ var DropdownItem = React.createClass({
           onMouseOver={this.handleMouseOver}
           onMouseLeave={this.handleMouseLeave}
           onClick={this.props.onClick}
-          value={this.props.value}
+          id={this.props.value}
           style={{
             backgroundColor: background,
             listStyle: "none",
             paddingLeft: "10px"
           }}>
-          {this.props.text}
+          {this.props.value}
         </li>
     )
   }
@@ -39,13 +39,16 @@ var DropdownList = React.createClass({
   },
   render: function() {
     var itemClick = this.props.onClick;
+    var re = new RegExp(this.props.re, "i");
 
     var list = this.props.list.map(function(item, i) {
-      return <DropdownItem
-                key={i}
-                text={item.text}
-                value={item.value}
-                onClick={itemClick} />
+      if (re.test(item.value) || re.test(item.alias)) {
+        return <DropdownItem
+                  key={i}
+                  value={item.value}
+                  onClick={itemClick} />
+      }
+      return
     });
 
     var show = this.props.display ? "block" : "none";
@@ -81,12 +84,19 @@ var Dropdown = React.createClass({
     document.removeEventListener("click", this.documentClickHandler);
   },
   documentClickHandler: function() {
-    console.log('asd')
     this.setState({focus: false});
   },
   handleClick: function(e) {
     e.nativeEvent.stopImmediatePropagation();
   },
+  handleChange: function(e) {
+    this.setState({value: e.target.value});
+    this.props.onChange(e);
+  },
+  handleFocus: function() {
+    this.setState({focus: true});
+    return;
+  },
   handleFocus: function() {
     this.setState({focus: true});
     return;
@@ -95,25 +105,24 @@ var Dropdown = React.createClass({
     this.setState({focus: false});
     return;
   },
-  handleFocus: function() {
-    this.setState({focus: true});
-    return;
-  },
-  handleBlur: function() {
-    this.setState({focus: false});
-    return;
+  handleKeyDown: function(e) {
+    switch(e.keyCode) {
+      case 9: // tab key
+        this.setState({focus: false});
+        break;
+    }
   },
   handleDropdownListClick: function(e) {
-    this.setState({value: e.target.value});
+    this.setState({value: e.target.id});
     this.props.onChange(e);
     return;
   },
   render: function() {
     var list = [
-      {text: "freshman", value: 2020},
-      {text: "sophomore", value: 2019},
-      {text: "junior", value: 2018},
-      {text: "senior", value: 2017}
+      {value: "freshman", alias: "2020"},
+      {value: "sophomore", alias: "2019"},
+      {value: "junior", alias: "2018"},
+      {value: "senior", aalias: "2017"}
     ];
 
     return (
@@ -126,15 +135,16 @@ var Dropdown = React.createClass({
           type={this.props.type}
           placeholder={this.props.placeholder}
           value={this.state.value}
-          onChange={this.props.onChange}
+          onChange={this.handleChange}
           onClick={this.handleClick}
           onFocus={this.handleFocus}
-          // onBlur={this.handleBlur}
+          onKeyDown={this.handleKeyDown}
           onTouchStart={this.handleFocus}
           onTouchEnd={this.handleBlur}
           style={{width: 'inherit'}}
         ></input>
         <DropdownList
+          re={this.state.value}
           list={list}
           display={this.state.focus}
           onClick={this.handleDropdownListClick}/>
@@ -224,7 +234,7 @@ var Application = React.createClass({
             required></input>
         </div>
         <div>
-          <label htmlFor='year'>And I&rsquo;m a</label>
+          <label htmlFor='year'>and I&rsquo;m a</label>
           <Dropdown
             id='year'
             type='text'
