@@ -1,65 +1,9 @@
 [
     {
-        "id": 1458353233757,
-        "firstName": "sadas",
-        "lastName": "asdf",
-        "year": "2020",
-        "school": "asdf",
-        "email": "pdf"
-    },
-    {
-        "id": 1458497035784,
-        "firstName": "Josh",
-        "lastName": "Shi",
-        "year": "",
-        "school": "Northwestern",
-        "email": "josh@josh.josh"
-    },
-    {
-        "id": 1458497130760,
-        "firstName": "asdf",
-        "lastName": "asdf",
-        "year": "",
-        "school": "asdf",
-        "email": "asdf"
-    },
-    {
-        "id": 1458497471990,
-        "firstName": "Josh",
-        "lastName": "Shi",
-        "year": "2019",
-        "school": "n",
-        "email": "asdf"
-    },
-    {
-        "id": 1458497706784,
-        "firstName": "asdf",
-        "lastName": "asdf",
-        "year": "0",
-        "school": "asdf",
-        "email": "asdf"
-    },
-    {
-        "id": 1458584599768,
+        "id": 1458676822108,
         "firstName": "",
         "lastName": "",
         "year": "freshman",
-        "school": "",
-        "email": ""
-    },
-    {
-        "id": 1458600390338,
-        "firstName": "",
-        "lastName": "",
-        "year": "asdf",
-        "school": "",
-        "email": ""
-    },
-    {
-        "id": 1458600405056,
-        "firstName": "",
-        "lastName": "",
-        "year": "2019f",
         "school": "",
         "email": ""
     }

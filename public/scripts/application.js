@@ -1,3 +1,12 @@
+var years = [
+  {value: "freshman", alias: "2020"},
+  {value: "sophomore", alias: "2019"},
+  {value: "junior", alias: "2018"},
+  {value: "senior", alias: "2017"},
+  {value: "grad student", alias: "other"},
+  {value: "high schooler", alias: "other"},
+];
+
 var DropdownItem = React.createClass({
   getInitialState: function() {
     return {
@@ -91,7 +100,7 @@ var Dropdown = React.createClass({
   },
   handleChange: function(e) {
     this.setState({value: e.target.value});
-    this.props.onChange(e);
+    this.props.onChange(e, e.target.value);
   },
   handleFocus: function() {
     this.setState({focus: true});
@@ -106,25 +115,32 @@ var Dropdown = React.createClass({
     return;
   },
   handleKeyDown: function(e) {
+    e.nativeEvent.stopImmediatePropagation();
     switch(e.keyCode) {
       case 9: // tab key
+      case 27: // escape key
         this.setState({focus: false});
+        break;
+
+      case 38: // up arrow
+        if (this.state.selectedItem > 0) {
+          this.setState({selectedItem: --this.state.selectedItem});
+        }
+        break;
+
+      case 40: // down arrow
+        if (this.state.selectedItem < this.props.options.length) {
+          this.setState({selectedItem: ++this.state.selectedItem});
+        }
         break;
     }
   },
   handleDropdownListClick: function(e) {
     this.setState({value: e.target.id});
-    this.props.onChange(e);
+    this.props.onChange(e, e.target.id);
     return;
   },
   render: function() {
-    var list = [
-      {value: "freshman", alias: "2020"},
-      {value: "sophomore", alias: "2019"},
-      {value: "junior", alias: "2018"},
-      {value: "senior", aalias: "2017"}
-    ];
-
     return (
       <div
         className='dropdown'
@@ -145,7 +161,7 @@ var Dropdown = React.createClass({
         ></input>
         <DropdownList
           re={this.state.value}
-          list={list}
+          list={this.props.options}
           display={this.state.focus}
           onClick={this.handleDropdownListClick}/>
       </div>
@@ -173,8 +189,8 @@ var Application = React.createClass({
   handleLastNameChange: function(e) {
     this.setState({lastName: e.target.value});
   },
-  handleYearChange: function(e) {
-    this.setState({year: e.target.value});
+  handleYearChange: function(e, value) {
+    this.setState({year: value});
   },
   handleSchoolChange: function(e) {
     this.setState({school: e.target.value});
@@ -241,6 +257,7 @@ var Application = React.createClass({
             placeholder='Year'
             value={this.state.year}
             onChange={this.handleYearChange}
+            options={years}
             required/>
         </div>
         <div>
