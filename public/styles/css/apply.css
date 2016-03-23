@@ -30,15 +30,15 @@ select option {
 
 input {
   border: none;
-  border-bottom: 8px solid #bbb;
+  border-bottom: 8px solid #bbbbbb;
   transition: all .1s linear; }
 
 input:hover,
 input:focus {
   border-bottom: 8px solid #0033cc; }
 
-input,
-select {
+.input-text,
+.dropdown {
   margin-left: 1vw; }
 
 label,

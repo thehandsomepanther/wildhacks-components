@@ -4,6 +4,11 @@
     font-weight: bold;
 }
 
+$ik-blue: #0033cc;
+$blue-grey: #ECEFF1;
+$grey: #bbbbbb;
+$primary-type: Circular, "Century Gothic" Arial, sans-serif;
+
 * {
   padding: 0 0 0 0;
   font-family: Circular;
@@ -42,17 +47,17 @@ select option {
 
 input {
   border: none;
-  border-bottom: 8px solid #bbb;
+  border-bottom: 8px solid $grey;
   transition: all .1s linear;
 }
 
 input:hover,
 input:focus {
-  border-bottom: 8px solid #0033cc;
+  border-bottom: 8px solid $ik-blue;
 }
 
-input,
-select {
+.input-text,
+.dropdown {
   margin-left: 1vw;
 }
 
@@ -83,7 +88,7 @@ button {
   font-size: 2em;
   background: none;
   border: 0;
-  border: 8px solid #0033cc;
+  border: 8px solid $ik-blue;
   padding: 10px;
   margin-top: 20px;
   transition: all .1s linear;
@@ -92,7 +97,7 @@ button {
 }
 
 button:hover {
-  background: #0033cc;
+  background: $ik-blue;
   color: white;
   cursor: pointer;
 }

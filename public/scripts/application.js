@@ -13,7 +13,7 @@ var DropdownItem = React.createClass({
     return;
   },
   render: function() {
-    var background = this.state.focus ? "blue" : "white";
+    var background = this.state.focus ? "blue" : "#ECEFF1";
 
     return (
         <li
@@ -58,7 +58,6 @@ var DropdownList = React.createClass({
         style={{
           position: 'absolute',
           width: 'inherit',
-          backgroundColor: 'white',
           overflow: 'scroll',
           height: '60px',
           marginTop: "0",
@@ -183,8 +182,8 @@ var Application = React.createClass({
   handleYearChange: function(e, value) {
     this.setState({year: value});
   },
-  handleSchoolChange: function(e) {
-    this.setState({school: e.target.value});
+  handleSchoolChange: function(e, value) {
+    this.setState({school: value});
   },
   handleEmailChange: function(e) {
     this.setState({email: e.target.value});
@@ -194,7 +193,7 @@ var Application = React.createClass({
     var firstName = this.state.firstName.trim(),
         lastName = this.state.lastName.trim(),
         year = this.state.year,
-        school = this.state.school.trim(),
+        school = this.state.school,
         email = this.state.email.trim();
 
     var app = {
@@ -227,6 +226,7 @@ var Application = React.createClass({
           <label htmlFor='first-name'>My name is</label>
           <input
             id='first-name'
+            className='input-text'
             type='text'
             placeholder='First'
             value={this.state.firstName}
@@ -234,6 +234,7 @@ var Application = React.createClass({
             required></input>
           <input
             id='last-name'
+            className='input-text'
             type='text'
             placeholder='Last'
             value={this.state.lastName}
@@ -266,6 +267,7 @@ var Application = React.createClass({
           <label htmlFor='email'>My email is</label>
           <input
             id='email'
+            className='input-text'
             type='email'
             placeholder='Email'
             value={this.state.email}

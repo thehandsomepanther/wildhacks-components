@@ -1,4 +1,8 @@
-var colleges = [{
+var colleges =
+[ {
+  "alias": " ",
+  "value": "Northwestern University"
+},{
   "alias": "AAMU",
   "value": "Alabama A & M University"
 }, {
@@ -43,10 +47,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Huntingdon College"
-}, {
-  "alias": " ",
-  "value": "Heritage Christian University"
-}, {
+},  {
   "alias": " ",
   "value": "Jacksonville State University"
 }, {
@@ -82,10 +83,7 @@ var colleges = [{
 }, {
   "alias": "Springhill,Springhill College,SHC,the Hill",
   "value": "Spring Hill College"
-}, {
-  "alias": " ",
-  "value": "Southeastern Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "Stillman College"
 }, {
@@ -103,10 +101,7 @@ var colleges = [{
 }, {
   "alias": "UAA",
   "value": "University of Alaska Anchorage"
-}, {
-  "alias": " ",
-  "value": "Alaska Bible College"
-}, {
+},  {
   "alias": "UAF",
   "value": "University of Alaska Fairbanks"
 }, {
@@ -118,10 +113,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Charter College-Anchorage"
-}, {
-  "alias": "UA",
-  "value": "University of Alaska System of Higher Education"
-}, {
+},  {
   "alias": "Academy of Business College , ,Rhodes College",
   "value": "Everest College-Phoenix"
 }, {
@@ -130,9 +122,6 @@ var colleges = [{
 }, {
   "alias": "Thunderbird",
   "value": "Thunderbird School of Global Management"
-}, {
-  "alias": " ",
-  "value": "American Indian College of the Assemblies of God Inc"
 }, {
   "alias": "Apollo College-Phoenix ,Carrington College-Phoenix",
   "value": "Carrington College-Phoenix"
@@ -172,19 +161,13 @@ var colleges = [{
 }, {
   "alias": "OU - Phoenix ,OU - Arizona ,OUAZ",
   "value": "Ottawa University-Phoenix"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Phoenix Campus"
-}, {
+},  {
   "alias": " ",
   "value": "Pima Medical Institute-Tucson"
 }, {
   "alias": "Prescot College , Prescott University , Prescot University , Prescott , PC , Prescott Center for Alternative Education",
   "value": "Prescott College"
-}, {
-  "alias": " ",
-  "value": "Arizona Christian University"
-}, {
+},  {
   "alias": "West",
   "value": "Western International University"
 },  {
@@ -361,10 +344,7 @@ var colleges = [{
 }, {
   "alias": "Institute of Transpersonal Psychology",
   "value": "Sofia University"
-}, {
-  "alias": " ",
-  "value": "California Christian College"
-}, {
+},  {
   "alias": "Main Campus",
   "value": "California College San Diego"
 }, {
@@ -382,10 +362,7 @@ var colleges = [{
 }, {
   "alias": "Concordia University Irvine",
   "value": "Concordia University-Irvine"
-}, {
-  "alias": " ",
-  "value": "San Diego Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "Claremont McKenna College"
 }, {
@@ -439,10 +416,7 @@ var colleges = [{
 }, {
   "alias": "AJU",
   "value": "American Jewish University"
-}, {
-  "alias": "LIFE Bible College",
-  "value": "Life Pacific College"
-}, {
+},  {
   "alias": "Art Institute of California-San Diego",
   "value": "The Art Institute of California-Argosy University San Diego"
 }, {
@@ -454,10 +428,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Lincoln University"
-}, {
-  "alias": " ",
-  "value": "Southern California Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "La Sierra University"
 }, {
@@ -466,10 +437,7 @@ var colleges = [{
 }, {
   "alias": "Los Angeles College of Chiropractic ,College of Acupuncture and Oriental Medicine",
   "value": "Southern California University of Health Sciences"
-}, {
-  "alias": " ",
-  "value": "The Master's College and Seminary"
-}, {
+},  {
   "alias": "AiCA-SF, The Art Institute of California - SF",
   "value": "The Art Institute of California-Argosy University San Francisco"
 }, {
@@ -502,9 +470,6 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Newschool of Architecture and Design"
-}, {
-  "alias": " ",
-  "value": "Northwestern Polytechnic University"
 }, {
   "alias": "NDNU",
   "value": "Notre Dame de Namur University"
@@ -556,10 +521,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Argosy University-San Francisco Bay Area"
-}, {
-  "alias": " ",
-  "value": "Saint Patrick's Seminary and University"
-},  {
+},   {
   "alias": " ",
   "value": "San Diego State University"
 }, {
@@ -598,10 +560,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Scripps College"
-}, {
-  "alias": " ",
-  "value": "Shasta Bible College and Graduate School"
-}, {
+},  {
   "alias": "Simpson College",
   "value": "Simpson University"
 }, {
@@ -625,10 +584,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Thomas Aquinas College"
-}, {
-  "alias": "Trinity Life Bible College",
-  "value": "Epic Bible College"
-},  {
+},   {
   "alias": " ",
   "value": "Walden University"
 }, {
@@ -637,10 +593,7 @@ var colleges = [{
 },  {
   "alias": " ",
   "value": "Woodbury University"
-}, {
-  "alias": " ",
-  "value": "Yeshiva Ohr Elchonon Chabad West Coast Talmudical Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Adams State University"
 }, {
@@ -652,10 +605,7 @@ var colleges = [{
 }, {
   "alias": "U of Colorado,Univ of Colorado,University of Colorado,U of CO,Univ of CO,University of CO,Boulder,CU,CU-Boulder,UCB,CUB,Colorado,Colorado University,U of Colo,Univ of Colo,University of Colo,Colo,Buffs,Buffalos,Buffaloes,CU at Boulder,Golden Buffs,University of Colorado at Boulder",
   "value": "University of Colorado Boulder"
-}, {
-  "alias": "CCU",
-  "value": "Colorado Christian University"
-}, {
+},  {
   "alias": " ",
   "value": "Colorado College"
 }, {
@@ -694,16 +644,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Naropa University"
-}, {
-  "alias": " ",
-  "value": "National American University-Colorado Springs"
-}, {
-  "alias": " ",
-  "value": "National American University-Denver"
-}, {
-  "alias": " ",
-  "value": "Nazarene Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "University of Northern Colorado"
 }, {
@@ -721,10 +662,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Western State Colorado University"
-}, {
-  "alias": " ",
-  "value": "Yeshiva Toras Chaim Talmudical Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Albertus Magnus College"
 }, {
@@ -757,10 +695,7 @@ var colleges = [{
 }, {
   "alias": "UHart, UHA, Hartford",
   "value": "University of Hartford"
-}, {
-  "alias": " ",
-  "value": "Holy Apostles College and Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Lyme Academy College of Fine Arts"
 }, {
@@ -886,10 +821,7 @@ var colleges = [{
 }, {
   "alias": "Chipola,CJC,Chipola Junior College,Chipola Jr. College",
   "value": "Chipola College"
-}, {
-  "alias": "CCC",
-  "value": "Clearwater Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "Daytona State College"
 }, {
@@ -961,10 +893,7 @@ var colleges = [{
 }, {
   "alias": "GCSC",
   "value": "Gulf Coast State College"
-}, {
-  "alias": " ",
-  "value": "Hobe Sound Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "Indian River State College"
 }, {
@@ -988,10 +917,7 @@ var colleges = [{
 }, {
   "alias": "LSSC",
   "value": "Lake-Sumter State College"
-}, {
-  "alias": " ",
-  "value": "Luther Rice University & Seminary"
-}, {
+},  {
   "alias": "SCF",
   "value": "State College of Florida-Manatee-Sarasota"
 }, {
@@ -1054,10 +980,7 @@ var colleges = [{
 }, {
   "alias": "Seminole State",
   "value": "Seminole State College of Florida"
-}, {
-  "alias": "St. John Vianney College Seminary  ,St John Vianney College Seminary",
-  "value": "Saint John Vianney College Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "South Florida State College"
 }, {
@@ -1147,10 +1070,7 @@ var colleges = [{
 }, {
   "alias": "CCGA",
   "value": "College of Coastal Georgia"
-}, {
-  "alias": "Carver College",
-  "value": "Carver Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "Clayton  State University"
 }, {
@@ -1282,10 +1202,7 @@ var colleges = [{
 },  {
   "alias": "UH at West Oahu ,UHWO",
   "value": "University of Hawaii-West Oahu"
-}, {
-  "alias": " ",
-  "value": "Boise Bible College"
-}, {
+},  {
   "alias": "Boise State",
   "value": "Boise State University"
 }, {
@@ -1408,10 +1325,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Lexington College"
-}, {
-  "alias": "Lincoln Christian College and Seminary",
-  "value": "Lincoln Christian University"
-}, {
+},  {
   "alias": " ",
   "value": "Lincoln College"
 }, {
@@ -1452,7 +1366,7 @@ var colleges = [{
   "value": "Northern Illinois University"
 }, {
   "alias": " ",
-  "value": "Northwestern University"
+  "value": "Northwestern Polytechnic University"
 }, {
   "alias": " ",
   "value": "Northeastern Illinois University"
@@ -1501,10 +1415,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Southern Illinois University"
-}, {
-  "alias": " ",
-  "value": "Trinity Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "Trinity International University-Illinois"
 },  {
@@ -1549,10 +1460,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Goshen College"
-}, {
-  "alias": " ",
-  "value": "Grace College and Theological Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Hanover College"
 }, {
@@ -1696,13 +1604,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "University of Dubuque"
-}, {
-  "alias": " ",
-  "value": "Emmaus Bible College"
-}, {
-  "alias": "FBBC&TS, FBBC",
-  "value": "Faith Baptist Bible College and Theological Seminary"
-}, {
+},   {
   "alias": " ",
   "value": "Graceland University-Lamoni"
 }, {
@@ -1711,12 +1613,6 @@ var colleges = [{
 }, {
   "alias": "Grinnell",
   "value": "Grinnell College"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Mason City Campus"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Cedar Rapids Campus"
 }, {
   "alias": " ",
   "value": "Hamilton Technical College"
@@ -1792,13 +1688,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Bethel College-North Newton"
-}, {
-  "alias": " ",
-  "value": "Central Baptist Theological Seminary"
-}, {
-  "alias": "Central Christian College",
-  "value": "Central Christian College of Kansas"
-}, {
+},   {
   "alias": " ",
   "value": "Donnelly College"
 }, {
@@ -1831,10 +1721,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Kansas Wesleyan University"
-}, {
-  "alias": "MCC",
-  "value": "Manhattan Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "McPherson College"
 }, {
@@ -1885,10 +1772,7 @@ var colleges = [{
 }, {
   "alias": "Centre,Centre College of Kentucky",
   "value": "Centre College"
-}, {
-  "alias": "Clear Creek Springs,Clear Creek Mountain Preachers Bible School,Clear Creek Baptist School,CCBBC",
-  "value": "Clear Creek Baptist Bible College"
-}, {
+},  {
   "alias": "Cumberland College",
   "value": "University of the Cumberlands"
 }, {
@@ -1903,10 +1787,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "National College-Lexington"
-}, {
-  "alias": "KMBC",
-  "value": "Kentucky Mountain Bible College"
-}, {
+},  {
   "alias": "KY State",
   "value": "Kentucky State University"
 }, {
@@ -1915,10 +1796,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "University of Kentucky"
-}, {
-  "alias": " ",
-  "value": "Kentucky Christian University"
-}, {
+},  {
   "alias": " ",
   "value": "Lindsey Wilson College"
 }, {
@@ -1948,10 +1826,7 @@ var colleges = [{
 }, {
   "alias": "UPIKE",
   "value": "University of Pikeville"
-}, {
-  "alias": "SBTS, Southern Seminary",
-  "value": "The Southern Baptist Theological Seminary"
-}, {
+},  {
   "alias": "Spalding",
   "value": "Spalding University"
 }, {
@@ -2005,10 +1880,7 @@ var colleges = [{
 }, {
   "alias": "UNO",
   "value": "University of New Orleans"
-}, {
-  "alias": "NOBTS",
-  "value": "New Orleans Baptist Theological Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Nicholls State University"
 }, {
@@ -2023,13 +1895,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Our Lady of the Lake College"
-}, {
-  "alias": " ",
-  "value": "Saint Joseph Seminary College"
-}, {
-  "alias": " ",
-  "value": "Southern University-Board and System"
-}, {
+},   {
   "alias": "Southeastern",
   "value": "Southeastern Louisiana University"
 }, {
@@ -2047,10 +1913,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Xavier University of Louisiana"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Maine Campus"
-}, {
+},  {
   "alias": " ",
   "value": "College of the Atlantic"
 }, {
@@ -2125,10 +1988,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Goucher College"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Hagerstown Campus"
-}, {
+},  {
   "alias": "Hood",
   "value": "Hood College"
 }, {
@@ -2167,10 +2027,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Notre Dame of Maryland University"
-}, {
-  "alias": " ",
-  "value": "St Mary's Seminary & University"
-}, {
+},  {
   "alias": "SU,Salisbury",
   "value": "Salisbury University"
 }, {
@@ -2185,10 +2042,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Towson University"
-}, {
-  "alias": "USM",
-  "value": "University System of Maryland"
-}, {
+},  {
   "alias": "USNA, Navy, Annapolis",
   "value": "United States Naval Academy"
 }, {
@@ -2389,10 +2243,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Regis College"
-}, {
-  "alias": " ",
-  "value": "Saint John's Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Salem State University"
 }, {
@@ -2497,19 +2348,13 @@ var colleges = [{
 }, {
   "alias": "GMI Engineering & Management Institute",
   "value": "Kettering University"
-}, {
-  "alias": " ",
-  "value": "Grace Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "Cornerstone University"
 }, {
   "alias": "Grand Valley,GVSU,Grand Valley State,",
   "value": "Grand Valley State University"
-}, {
-  "alias": " ",
-  "value": "Great Lakes Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "Hope College"
 },  {
@@ -2566,10 +2411,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Kuyper College"
-}, {
-  "alias": "SHMS",
-  "value": "Sacred Heart Major Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Saginaw Valley State University"
 }, {
@@ -2590,10 +2432,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Academy College"
-}, {
-  "alias": "ABI",
-  "value": "Apostolic Bible Institute Inc"
-}, {
+},  {
   "alias": " ",
   "value": "Augsburg College"
 }, {
@@ -2662,10 +2501,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Herzing University-Minneapolis"
-}, {
-  "alias": "Minnesota Bible College",
-  "value": "Crossroads College"
-}, {
+},  {
   "alias": " ",
   "value": "University of Minnesota-Duluth"
 }, {
@@ -2677,10 +2513,7 @@ var colleges = [{
 }, {
   "alias": "MSU Moorhead ,MSUM",
   "value": "Minnesota State University-Moorhead"
-}, {
-  "alias": " ",
-  "value": "National American University-Roseville"
-}, {
+},  {
   "alias": " ",
   "value": "Brown College-Mendota Heights"
 }, {
@@ -2692,10 +2525,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Northwestern Health Sciences University"
-}, {
-  "alias": "OHCC",
-  "value": "Oak Hills Christian College"
-}, {
+},  {
   "alias": "Saint Benedict",
   "value": "College of Saint Benedict"
 }, {
@@ -2753,9 +2583,6 @@ var colleges = [{
   "alias": "Millsaps",
   "value": "Millsaps College"
 }, {
-  "alias": " ",
-  "value": "Board of Trustees-Mississippi State Institutions of Higher Learning"
-}, {
   "alias": "Ole Miss",
   "value": "University of Mississippi"
 }, {
@@ -2791,19 +2618,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Avila University"
-},  {
-  "alias": " ",
-  "value": "Baptist Bible College"
-}, {
-  "alias": " ",
-  "value": "Calvary Bible College and Theological Seminary"
-}, {
-  "alias": " ",
-  "value": "Central Christian College of the Bible"
-}, {
-  "alias": " ",
-  "value": "Central Bible College"
-}, {
+},      {
   "alias": "Central",
   "value": "University of Central Missouri"
 }, {
@@ -2812,10 +2627,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Columbia College"
-}, {
-  "alias": " ",
-  "value": "Conception Seminary College"
-}, {
+},  {
   "alias": " ",
   "value": "Cottey College"
 }, {
@@ -2842,10 +2654,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Kansas City Art Institute"
-}, {
-  "alias": " ",
-  "value": "Kenrick Glennon Seminary"
-}, {
+},  {
   "alias": "Lincoln University of Missouri",
   "value": "Lincoln University"
 }, {
@@ -2857,10 +2666,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Maryville University of Saint Louis"
-}, {
-  "alias": "MBTS,MBC,MBC,SBC,Midwestern Baptist Seminary,Midwestern,Midwestern Baptist College, SBC,Midwestern Baptist College,MBCSBC",
-  "value": "Midwestern Baptist Theological Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Westwood College-O'Hare Airport"
 }, {
@@ -2899,10 +2705,7 @@ var colleges = [{
 }, {
   "alias": "Northwest",
   "value": "Northwest Missouri State University"
-}, {
-  "alias": " ",
-  "value": "Ozark Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "College of the Ozarks"
 }, {
@@ -2926,10 +2729,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Sanford-Brown College-Fenton"
-}, {
-  "alias": " ",
-  "value": "Saint Louis Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "Southwest Baptist University"
 }, {
@@ -3010,31 +2810,19 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Doane College-Crete"
-}, {
-  "alias": "Grace College of the Bible ,Grace College of Graduate Studies ,Grace Bible Institute",
-  "value": "Grace University"
-}, {
+},  {
   "alias": " ",
   "value": "Hastings College"
 }, {
   "alias": "UNK,University of Nebraska - Kearney,Nebraska - Kearney,Nebraska Kearney,",
   "value": "University of Nebraska at Kearney"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Lincoln Campus"
-},  {
+},   {
   "alias": "MidlandU",
   "value": "Midland University"
-}, {
-  "alias": " ",
-  "value": "Nebraska Christian College"
-}, {
+},  {
   "alias": "UNOMAHA",
   "value": "University of Nebraska at Omaha"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Omaha Campus"
-}, {
+},  {
   "alias": "UNMC",
   "value": "University of Nebraska Medical Center"
 }, {
@@ -3046,10 +2834,7 @@ var colleges = [{
 }, {
   "alias": "Peru State",
   "value": "Peru State College"
-}, {
-  "alias": " ",
-  "value": "Summit Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "College of Saint Mary"
 }, {
@@ -3148,10 +2933,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Centenary College"
-}, {
-  "alias": " ",
-  "value": "Cooper Health System Center for Allied Health Education"
-}, {
+},  {
   "alias": " ",
   "value": "Drew University"
 }, {
@@ -3442,16 +3224,10 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Jamestown Business College"
-}, {
-  "alias": " ",
-  "value": "Jewish Theological Seminary of America"
-}, {
+},  {
   "alias": "Juilliard",
   "value": "The Juilliard School"
-}, {
-  "alias": " ",
-  "value": "Kehilath Yakov Rabbinical Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Keuka College"
 }, {
@@ -3499,10 +3275,7 @@ var colleges = [{
 }, {
   "alias": "Mercy",
   "value": "Mercy College"
-}, {
-  "alias": " ",
-  "value": "Mesivta Torah Vodaath Rabbinical Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Mesivta of Eastern Parkway-Yeshiva Zichron Meilech"
 }, {
@@ -3547,10 +3320,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Nyack College"
-}, {
-  "alias": " ",
-  "value": "Ohr Hameir Theological Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Pace University-New York"
 }, {
@@ -3580,16 +3350,10 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Rabbinical College Beth Shraga"
-}, {
-  "alias": " ",
-  "value": "Rabbinical Seminary M'kor Chaim"
-}, {
+},  {
   "alias": " ",
   "value": "Rabbinical College of Long Island"
-}, {
-  "alias": " ",
-  "value": "Rabbinical Seminary of America"
-}, {
+},  {
   "alias": "RPI, Rensselaer",
   "value": "Rensselaer Polytechnic Institute"
 }, {
@@ -3727,16 +3491,10 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Syracuse University"
-}, {
-  "alias": " ",
-  "value": "Talmudical Seminary Oholei Torah"
-}, {
+},  {
   "alias": " ",
   "value": "Talmudical Institute of Upstate New York"
-}, {
-  "alias": " ",
-  "value": "Torah Temimah Talmudical Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Touro College"
 }, {
@@ -3748,10 +3506,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Union College"
-}, {
-  "alias": " ",
-  "value": "United Talmudical Seminary"
-}, {
+},  {
   "alias": "USMMA,Kings Point",
   "value": "United States Merchant Marine Academy"
 }, {
@@ -3865,10 +3620,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Guilford College"
-}, {
-  "alias": " ",
-  "value": "Heritage Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "High Point University"
 }, {
@@ -3949,10 +3701,7 @@ var colleges = [{
 }, {
   "alias": "Queens",
   "value": "Queens University of Charlotte"
-}, {
-  "alias": " ",
-  "value": "Mid-Atlantic Christian University"
-}, {
+},  {
   "alias": "St. Aug",
   "value": "Saint Augustine's University"
 }, {
@@ -3964,10 +3713,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "St Andrews University"
-}, {
-  "alias": "SEBTS",
-  "value": "Southeastern Baptist Theological Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Wake Forest University"
 }, {
@@ -3976,10 +3722,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Wingate University"
-}, {
-  "alias": " ",
-  "value": "Carolina Christian College"
-}, {
+},  {
   "alias": "WSSU",
   "value": "Winston-Salem State University"
 }, {
@@ -4012,10 +3755,7 @@ var colleges = [{
 }, {
   "alias": "North Dakota State University, NDSU",
   "value": "North Dakota State University-Main Campus"
-},  {
-  "alias": " ",
-  "value": "Trinity Bible College"
-},  {
+},    {
   "alias": " ",
   "value": "United Tribes Technical College"
 }, {
@@ -4066,10 +3806,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Central State University"
-},  {
-  "alias": "Cincinnati Bible College & Seminary; Cincinnati Bible College; Cincinnati Bible Seminary",
-  "value": "Cincinnati Christian University"
-}, {
+},   {
   "alias": " ",
   "value": "Cincinnati College of Mortuary Science"
 }, {
@@ -4081,10 +3818,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "University of Cincinnati-Blue Ash College"
-}, {
-  "alias": "OCU",
-  "value": "Ohio Christian University"
-}, {
+},  {
   "alias": "CIA",
   "value": "Cleveland Institute of Art"
 }, {
@@ -4114,10 +3848,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Franklin University"
-}, {
-  "alias": " ",
-  "value": "Gods Bible School and College"
-},  {
+},   {
   "alias": "Heidelburg College,Hiedelberg College,Hiedelburg College,Heidleberg College,Heidleburg College,The 'Berg,Heidelberg University,Hiedelberg University,Heidelburg University",
   "value": "Heidelberg University"
 }, {
@@ -4246,10 +3977,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "University of Toledo"
-}, {
-  "alias": "TSBC ,Tri State Bible College  ,TriState Bible College",
-  "value": "Tri-State Bible College"
-}, {
+},  {
   "alias": "Union, The Union Institute, Vermont College",
   "value": "Union Institute & University"
 }, {
@@ -4315,10 +4043,7 @@ var colleges = [{
 }, {
   "alias": "NWOSU Northwestern Okla State Northwestern Oklahoma State,",
   "value": "Northwestern Oklahoma State University"
-}, {
-  "alias": "OC, Oklahoma Christian, OCUSA, Oklahoma Christian University of Science and Arts, OCC, Oklahoma Christian College",
-  "value": "Oklahoma Christian University"
-}, {
+},  {
   "alias": " ",
   "value": "University of Oklahoma-Health Sciences Center"
 }, {
@@ -4357,10 +4082,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Southeastern Oklahoma State University"
-}, {
-  "alias": "SCU",
-  "value": "Southwestern Christian University"
-}, {
+},  {
   "alias": "SWOSU,Southwestern,Southwestern Oklahoma State University Weatherford Campus,Southwestern Oklahoma State University Sayre Campus",
   "value": "Southwestern Oklahoma State University"
 }, {
@@ -4375,10 +4097,7 @@ var colleges = [{
 }, {
   "alias": "EOU",
   "value": "Eastern Oregon University"
-}, {
-  "alias": " ",
-  "value": "New Hope Christian College-Eugene"
-}, {
+},  {
   "alias": " ",
   "value": "George Fox University"
 },  {
@@ -4390,19 +4109,7 @@ var colleges = [{
 }, {
   "alias": "Marylhurst,Marlyhurst,Maryhurst,Marlyhust,Marlhurst,Marylhust",
   "value": "Marylhurst University"
-}, {
-  "alias": " ",
-  "value": "Mount Angel Seminary"
-}, {
-  "alias": "Multnomah Bible College,Multnomah Biblical Seminary,MBC,MBS,Multnomah School of the Bible",
-  "value": "Multnomah University"
-}, {
-  "alias": "NCU",
-  "value": "Northwest Christian University"
-}, {
-  "alias": " ",
-  "value": "Oregon University System"
-}, {
+},     {
   "alias": "OHSU, Oregon Health and Sciences University",
   "value": "Oregon Health & Science University"
 }, {
@@ -4453,10 +4160,7 @@ var colleges = [{
 }, {
   "alias": "Western States Chiropractic College ,WSCC ,Western States ,Western States Chiropractic College ,UWS ,WSCC",
   "value": "University of Western States"
-}, {
-  "alias": "Bryn Athyn College",
-  "value": "Bryn Athyn College of the New Church"
-}, {
+},  {
   "alias": " ",
   "value": "Albright College"
 }, {
@@ -4474,10 +4178,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "The Art Institute of Philadelphia"
-},  {
-  "alias": "BBC ,BBC&S ,BBC & S ,BBS ,Baptist Bible College of PA ,Baptist Bible College ,Baptist Bible Seminary ,Baptist Bible College & Seminary ,Baptist Bible College of Pennsylvania",
-  "value": "Baptist Bible College & Seminary of Pennsylvania"
-}, {
+},   {
   "alias": "Beaver College",
   "value": "Arcadia University"
 }, {
@@ -4546,10 +4247,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Elizabethtown College"
-}, {
-  "alias": " ",
-  "value": "Faith Theological Seminary"
-}, {
+},  {
   "alias": "Franklin & Marshall College,Franklin & Marshall,Franklin and Marshall,F&M,FandM",
   "value": "Franklin and Marshall College"
 }, {
@@ -4603,10 +4301,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Lafayette College"
-}, {
-  "alias": " ",
-  "value": "Lancaster Bible College"
-}, {
+},  {
   "alias": "LVC",
   "value": "Lebanon Valley College"
 }, {
@@ -4771,10 +4466,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Slippery Rock University of Pennsylvania"
-}, {
-  "alias": " ",
-  "value": "Saint Charles Borromeo Seminary-Overbrook"
-}, {
+},  {
   "alias": "Susquahanna,Susquehana,Sesquehanna",
   "value": "Susquehanna University"
 }, {
@@ -4795,10 +4487,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Ursinus College"
-}, {
-  "alias": "VFCC",
-  "value": "Valley Forge Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "Villanova University"
 }, {
@@ -4858,10 +4547,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Salve Regina University"
-}, {
-  "alias": " ",
-  "value": "Northpoint Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "Allen University"
 }, {
@@ -4915,10 +4601,7 @@ var colleges = [{
 }, {
   "alias": "Furman",
   "value": "Furman University"
-}, {
-  "alias": "Cathedral Baptist Church of the Grand Strand",
-  "value": "Cathedral Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "Lander University"
 }, {
@@ -4981,13 +4664,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Mount Marty College"
-}, {
-  "alias": " ",
-  "value": "National American University-Rapid City"
-}, {
-  "alias": " ",
-  "value": "National American University-Sioux Falls"
-}, {
+},   {
   "alias": "NSU",
   "value": "Northern State University"
 }, {
@@ -5035,10 +4712,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Carson-Newman University"
-}, {
-  "alias": "CBU",
-  "value": "Christian Brothers University"
-}, {
+},  {
   "alias": "CU",
   "value": "Cumberland University"
 }, {
@@ -5053,10 +4727,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Fisk University"
-}, {
-  "alias": "Free will Baptist Bible College",
-  "value": "Welch College"
-}, {
+},  {
   "alias": " ",
   "value": "Freed-Hardeman University"
 }, {
@@ -5152,10 +4823,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Vanderbilt University"
-}, {
-  "alias": " ",
-  "value": "Abilene Christian University"
-}, {
+},  {
   "alias": " ",
   "value": "Amberton University"
 }, {
@@ -5170,13 +4838,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Austin College"
-}, {
-  "alias": " ",
-  "value": "Baptist Health System School of Health Professions"
-}, {
-  "alias": "BMA Seminary",
-  "value": "Baptist Missionary Association Theological Seminary"
-}, {
+},   {
   "alias": "Texas A&M Health Science Center",
   "value": "Texas A & M University Health Science Center"
 }, {
@@ -5197,10 +4859,7 @@ var colleges = [{
 }, {
   "alias": "DBU",
   "value": "Dallas Baptist University"
-}, {
-  "alias": " ",
-  "value": "Dallas Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "University of Dallas"
 }, {
@@ -5248,10 +4907,7 @@ var colleges = [{
 }, {
   "alias": "UIW,Incarnate Word,Incarnate,Incarnate Word, University of,Incarnate Word, Univ of,Univ. of the Incarnate Word",
   "value": "University of the Incarnate Word"
-},   {
-  "alias": " ",
-  "value": "Jarvis Christian College"
-}, {
+},    {
   "alias": " ",
   "value": "Lamar University"
 }, {
@@ -5260,10 +4916,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "LeTourneau University"
-}, {
-  "alias": " ",
-  "value": "Lubbock Christian University"
-}, {
+},  {
   "alias": "UMHB,MHB,Mary Hardin-Baylor",
   "value": "University of Mary Hardin-Baylor"
 }, {
@@ -5335,10 +4988,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Southwestern Adventist University"
-}, {
-  "alias": " ",
-  "value": "Southwestern Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "Sul Ross State University"
 }, {
@@ -5374,10 +5024,7 @@ var colleges = [{
 }, {
   "alias": "UT Tyler",
   "value": "The University of Texas at Tyler"
-}, {
-  "alias": "TCU",
-  "value": "Texas Christian University"
-}, {
+},  {
   "alias": "TC",
   "value": "Texas College"
 }, {
@@ -5752,10 +5399,7 @@ var colleges = [{
 }, {
   "alias": "Alderson-Broaddus College",
   "value": "Alderson Broaddus University"
-}, {
-  "alias": " ",
-  "value": "Appalachian Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "Bethany College"
 }, {
@@ -5848,10 +5492,7 @@ var colleges = [{
 }, {
   "alias": "Lawrence",
   "value": "Lawrence University"
-}, {
-  "alias": "MBBC, Maranatha College, Maranatha, Maranatha Baptist College, Maranatha Bible College, Maranatha Baptist Bible College, Marantha, Maranatha University, Maranatha Baptist University, MBU, Maranatha Bible University",
-  "value": "Maranatha Baptist University"
-}, {
+},  {
   "alias": "Marian College of Fond du Lac",
   "value": "Marian University"
 }, {
@@ -5866,10 +5507,7 @@ var colleges = [{
 }, {
   "alias": "Mount Mary College ,MMU ,MMC ,Women ,Wisconsin",
   "value": "Mount Mary University"
-}, {
-  "alias": "NBBC , Northland Baptist College , Northland Bible College , Northland , Northland Mission ,Northland International , NI",
-  "value": "Northland International University"
-}, {
+},  {
   "alias": " ",
   "value": "Northland College"
 }, {
@@ -5986,37 +5624,22 @@ var colleges = [{
 }, {
   "alias": "Antioch University McGregor",
   "value": "Antioch University-Midwest"
-}, {
-  "alias": "Gulf Coast Bible College,Mid-America Bible College,MACU",
-  "value": "Mid-America Christian University"
-}, {
+},  {
   "alias": " ",
   "value": "Platt College-Tulsa"
-}, {
-  "alias": "UTS",
-  "value": "Unification Theological Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Beckfield College-Florence"
-},  {
-  "alias": "ETS",
-  "value": "Ecumenical Theological Seminary"
-}, {
+},   {
   "alias": " ",
   "value": "Landmark College"
-}, {
-  "alias": " ",
-  "value": "National American University-Independence"
-}, {
+},  {
   "alias": " ",
   "value": "Yeshiva Gedolah of Greater Detroit"
 }, {
   "alias": " ",
   "value": "Austin Graduate School of Theology"
-}, {
-  "alias": " ",
-  "value": "National American University-Albuquerque"
-}, {
+},  {
   "alias": " ",
   "value": "ECPI University"
 },  {
@@ -6034,16 +5657,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Platt College-Aurora"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Davenport Campus"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Cedar Falls Campus"
-}, {
-  "alias": " ",
-  "value": "Christian Life College"
-},   {
+},      {
   "alias": " ",
   "value": "Skyline College-Roanoke"
 }, {
@@ -6052,10 +5666,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "New College of Florida"
-}, {
-  "alias": " ",
-  "value": "Montana Bible College"
-}, {
+},  {
   "alias": "LCB Scottsdale",
   "value": "Le Cordon Bleu College of Culinary Arts-Scottsdale"
 }, {
@@ -6076,10 +5687,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Madison Media Institute"
-}, {
-  "alias": " ",
-  "value": "South Florida Bible College and Theological Seminary"
-}, {
+},  {
   "alias": "Penn College",
   "value": "Pennsylvania College of Technology"
 }, {
@@ -6091,10 +5699,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Argosy University-Hawaii"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Des Moines Campus"
-}, {
+},  {
   "alias": " ",
   "value": "McNally Smith College of Music"
 }, {
@@ -6124,13 +5729,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Fremont College"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Online Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-San Diego Campus"
-},  {
+},    {
   "alias": " ",
   "value": "Remington College-Honolulu Campus"
 }, {
@@ -6168,17 +5767,11 @@ var colleges = [{
   "value": "Northwest Indian College"
 }, {
   "alias": " ",
-  "value": "University of Phoenix-Utah Campus"
-}, {
-  "alias": " ",
   "value": "Baker College of Port Huron"
 }, {
   "alias": " ",
   "value": "Westwood College-Denver South"
-},  {
-  "alias": " ",
-  "value": "University of Phoenix-Puerto Rico Campus"
-}, {
+},   {
   "alias": " ",
   "value": "Midwest College of Oriental Medicine-Racine"
 }, {
@@ -6235,10 +5828,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Schiller International University"
-}, {
-  "alias": "USM",
-  "value": "University System of Maryland-Research Centers"
-}, {
+},  {
   "alias": " ",
   "value": "Baker College of Cadillac"
 }, {
@@ -6250,22 +5840,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Rabbinical College of Ohr Shimon Yisroel"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Southern Arizona Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Colorado Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Albuquerque Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Bay Area Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Southern California Campus"
-}, {
+},      {
   "alias": " ",
   "value": "Westwood College-Dupage"
 }, {
@@ -6325,10 +5900,7 @@ var colleges = [{
 }, {
   "alias": "M.D. Anderson Cancer Center, M.D. Anderson Hospital,M.D. Anderson Hospital and Tumor Institute,MDACC,UTMDACC,Anderson Cancer Center",
   "value": "The University of Texas MD Anderson Cancer Center"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Las Vegas Campus"
-}, {
+},  {
   "alias": "CBT College - Kendall Campus",
   "value": "College of Business and Technology-Kendall"
 }, {
@@ -6340,16 +5912,10 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Argosy University-Washington DC"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Sacramento Valley Campus"
-}, {
+},  {
   "alias": " ",
   "value": "Everest University-Melbourne"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Hawaii Campus"
-}, {
+},  {
   "alias": " ",
   "value": "Virginia College-Birmingham"
 }, {
@@ -6367,13 +5933,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Argosy University-Schaumburg"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Louisiana Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Detroit Campus"
-}, {
+},   {
   "alias": " ",
   "value": "Living Arts College"
 }, {
@@ -6415,16 +5975,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Yeshiva of the Telshe Alumni"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Western Washington Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Central Florida Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Oregon Campus"
-}, {
+},    {
   "alias": " ",
   "value": "Platt College-Ontario"
 }, {
@@ -6457,25 +6008,7 @@ var colleges = [{
 },   {
   "alias": " ",
   "value": "Yeshiva College of the Nations Capital"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-South Florida Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-North Florida Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-West Florida Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Maryland Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Oklahoma City Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Tulsa Campus"
-}, {
+},       {
   "alias": "LSUHSC-S,LSU Health Sciences Center-Shreveport,LSU Health Sciences Center - Shreveport,LSU Health Sciences Center in Shreveport,LSU Health Sciences Center at Shreveport,Louisiana State University Health Sciences Center at Shreveport,Louisiana State University Health Sciences Center in Shreveport",
   "value": "Louisiana State University Health Sciences Center-Shreveport"
 }, {
@@ -6490,13 +6023,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Argosy University-Orange County"
-}, {
-  "alias": " ",
-  "value": "National American University-Bloomington"
-}, {
-  "alias": " ",
-  "value": "International Baptist College and Seminary"
-}, {
+},   {
   "alias": " ",
   "value": "Professional Training Centers"
 }, {
@@ -6520,13 +6047,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Brookline College-Tucson"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Southern Colorado Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-West Michigan Campus"
-}, {
+},   {
   "alias": " ",
   "value": "Stratford University"
 }, {
@@ -6535,10 +6056,7 @@ var colleges = [{
 }, {
   "alias": "AIU-South Florida",
   "value": "American InterContinental University-South Florida"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Philadelphia Campus"
-},  {
+},   {
   "alias": " ",
   "value": "Everest University-Jacksonville"
 }, {
@@ -6547,25 +6065,16 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Argosy University-Seattle"
-},   {
-  "alias": " ",
-  "value": "University of Phoenix-St Louis Campus"
-}, {
+},    {
   "alias": " ",
   "value": "Johnson & Wales University-Denver"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Cleveland Campus"
-}, {
+},  {
   "alias": " ",
   "value": "East West College of Natural Medicine"
 }, {
   "alias": " ",
   "value": "Atlantic Institute of Oriental Medicine"
-}, {
-  "alias": " ",
-  "value": "Crossroads Bible College"
-}, {
+},  {
   "alias": " ",
   "value": "King's University"
 }, {
@@ -6589,37 +6098,13 @@ var colleges = [{
 }, {
   "alias": "Marlboro College, Grad School, Graduate Center, Grad Center, MCGS, MCGC",
   "value": "Marlboro College-Graduate School"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Boston Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Dallas Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Houston Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Milwaukee Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Idaho Campus"
-}, {
+},      {
   "alias": " ",
   "value": "Westwood College-Inland Empire"
 }, {
   "alias": " ",
   "value": "Atenas College"
-}, {
-  "alias": " ",
-  "value": "National American University-Ellsworth AFB Extension"
-}, {
-  "alias": " ",
-  "value": "National American University-Albuquerque West"
-}, {
-  "alias": " ",
-  "value": "National American University-Brooklyn Center"
-}, {
+},    {
   "alias": " ",
   "value": "Pillar College"
 }, {
@@ -6655,22 +6140,7 @@ var colleges = [{
 }, {
   "alias": "Olin College of Engineering",
   "value": "Franklin W Olin College of Engineering"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Kansas City Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Atlanta Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Chicago Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Nashville Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Northern Virginia Campus"
-}, {
+},      {
   "alias": " ",
   "value": "Argosy University-Dallas"
 },  {
@@ -6685,10 +6155,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "University of the Potomac-VA Campus"
-}, {
-  "alias": " ",
-  "value": "National American University-Overland Park"
-}, {
+},  {
   "alias": " ",
   "value": "Pacific College of Oriental Medicine-Chicago"
 }, {
@@ -6700,37 +6167,16 @@ var colleges = [{
 }, {
   "alias": "Birthingway Midwifery Center , Birthingway Midwifery School , Birthingway",
   "value": "Birthingway College of Midwifery"
-}, {
-  "alias": "Faith Seminary",
-  "value": "Faith Evangelical College & Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Family of Faith College"
-}, {
-  "alias": " ",
-  "value": "Hood Theological Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "West Coast University-Los Angeles"
-}, {
-  "alias": "WCC ,DBA- Williamson College",
-  "value": "Williamson Christian College"
-}, {
+},  {
   "alias": "DIT,Digipen,Digi Tech,Digpen,Digitech",
   "value": "DigiPen Institute of Technology"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Cincinnati Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Wichita Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Charlotte Campus"
-},   {
-  "alias": " ",
-  "value": "University of Phoenix-Indianapolis Campus"
-}, {
+},       {
   "alias": " ",
   "value": "Dewey University-Hato Rey"
 }, {
@@ -6739,25 +6185,13 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Westwood College-Chicago Loop"
-}, {
-  "alias": " ",
-  "value": "University of North Texas System"
-}, {
+},  {
   "alias": " ",
   "value": "Strayer University-Tennessee"
 }, {
   "alias": " ",
   "value": "Strayer University-Pennsylvania"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Columbus Georgia Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Memphis Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Columbus Ohio Campus"
-},  {
+},     {
   "alias": " ",
   "value": "National University College-Rio Grande"
 }, {
@@ -6787,10 +6221,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Jones International University"
-}, {
-  "alias": " ",
-  "value": "New Life Theological Seminary"
-}, {
+},  {
   "alias": "Tucson Design College",
   "value": "The Art Institute of Tucson"
 }, {
@@ -6820,16 +6251,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Westwood College-Northlake"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Jersey City Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Minneapolis St Paul Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Louisville Campus"
-}, {
+},    {
   "alias": "Florida Metropolitan University-Orange Park",
   "value": "Everest University-Orange Park"
 }, {
@@ -6838,10 +6260,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Johnson & Wales University-Charlotte"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Central Valley Campus"
-}, {
+},  {
   "alias": "Southern Nevada Educational Services Roseman University of Health Sciences , ,Nevada College of Pharmacy , ,University of Southern Nevada",
   "value": "Roseman University of Health Sciences"
 }, {
@@ -6856,10 +6275,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Ecclesia College"
-}, {
-  "alias": " ",
-  "value": "Maple Springs Baptist Bible College and Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Stanbridge College"
 }, {
@@ -6877,28 +6293,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Stevens-Henager College-Logan"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Cheyenne Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Springfield  Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Des Moines Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-San Antonio Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Austin Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Richmond-Virginia Beach Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Raleigh Campus"
-}, {
+},        {
   "alias": " ",
   "value": "International Academy of Design and Technology-Henderson"
 }, {
@@ -6934,22 +6329,13 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Daymar College-Bellevue"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Savannah Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Northern Nevada Campus"
-}, {
+},   {
   "alias": " ",
   "value": "Minnesota School of Business-Rochester"
 }, {
   "alias": " ",
   "value": "Georgia Gwinnett College"
-}, {
-  "alias": " ",
-  "value": "SUM Bible College and Theological Seminary"
-}, {
+},  {
   "alias": "Utah College of Dental Hygiene",
   "value": "Careers Unlimited"
 }, {
@@ -6961,25 +6347,10 @@ var colleges = [{
 },  {
   "alias": " ",
   "value": "The Art Institute of Indianapolis"
-},        {
-  "alias": " ",
-  "value": "University of Phoenix-Omaha Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Northwest Arkansas Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Madison Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Columbia Campus"
-}, {
+},            {
   "alias": " ",
   "value": "The Art Institute of California-Argosy University Inland Empire"
-}, {
-  "alias": " ",
-  "value": "National American University-Zona Rosa"
-}, {
+},  {
   "alias": " ",
   "value": "Westwood College-Annandale"
 }, {
@@ -6997,13 +6368,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "The Robert B Miller College"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Fairfield County Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Harrisburg Campus"
-}, {
+},   {
   "alias": "University of South Florida St. Petersburg",
   "value": "University of South Florida-St Petersburg"
 }, {
@@ -7015,13 +6380,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Strayer University-Florida"
-}, {
-  "alias": "American Military University ,American Public University",
-  "value": "American Public University System"
-}, {
-  "alias": " ",
-  "value": "Huntsville Bible College"
-}, {
+},   {
   "alias": " ",
   "value": "Bais Medrash Toras Chesed"
 }, {
@@ -7057,22 +6416,10 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "International Academy of Design and Technology-Sacramento"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Birmingham Campus"
-}, {
+},  {
   "alias": " ",
   "value": "International Academy of Design and Technology-San Antonio"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Augusta Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Washington DC Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Chattanooga Campus"
-}, {
+},    {
   "alias": " ",
   "value": "Argosy University-Inland Empire"
 }, {
@@ -7102,10 +6449,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Yeshiva Toras Chaim"
-}, {
-  "alias": " ",
-  "value": "Talmudical Seminary of Bobov"
-}, {
+},  {
   "alias": " ",
   "value": "Southwest University at El Paso"
 },  {
@@ -7132,13 +6476,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "The Art Institute of California-Argosy University-Silicon Valley"
-}, {
-  "alias": " ",
-  "value": "National American University-Austin"
-}, {
-  "alias": " ",
-  "value": "National American University-Wichita"
-},        {
+},          {
   "alias": " ",
   "value": "The Art Institutes International-Kansas City"
 }, {
@@ -7165,10 +6503,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Broadview University-Orem"
-}, {
-  "alias": "Taft Law School ,William Howard Taft University",
-  "value": "Taft University System"
-}, {
+},  {
   "alias": " ",
   "value": "Aspen University"
 },  {
@@ -7183,10 +6518,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Minnesota School of Business-Moorhead"
-}, {
-  "alias": " ",
-  "value": "Providence Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "The Art Institute of Washington-Dulles"
 }, {
@@ -7240,10 +6572,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "University of Fort Lauderdale"
-}, {
-  "alias": " ",
-  "value": "New Hope Christian College-Honolulu"
-}, {
+},  {
   "alias": "American College of Technology",
   "value": "American Business and Technology University"
 }, {
@@ -7390,16 +6719,10 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "New York Film Academy"
-}, {
-  "alias": " ",
-  "value": "Georgia Christian University"
-}, {
+},  {
   "alias": "JMVU, Vargas University",
   "value": "Jose Maria Vargas University"
-}, {
-  "alias": " ",
-  "value": "Shepherds Theological Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Grace College of Divinity"
 }, {
@@ -7423,28 +6746,10 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "John Paul the Great Catholic University"
-},   {
-  "alias": " ",
-  "value": "University of Phoenix-Jackson Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Delaware Campus"
-}, {
+},     {
   "alias": " ",
   "value": "Independence University"
-}, {
-  "alias": " ",
-  "value": "National American University-Tulsa"
-}, {
-  "alias": " ",
-  "value": "National American University-Centennial"
-}, {
-  "alias": " ",
-  "value": "National American University-Lee's Summit"
-}, {
-  "alias": " ",
-  "value": "National American University-Colorado Springs South"
-}, {
+},     {
   "alias": " ",
   "value": "Globe University-Appleton"
 },  {
@@ -7462,10 +6767,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "The Art Institute of Wisconsin"
-},       {
-  "alias": " ",
-  "value": "University of Phoenix-Knoxville Campus"
-}, {
+},        {
   "alias": " ",
   "value": "Azusa Pacific Online University"
 }, {
@@ -7474,22 +6776,10 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "CollegeAmerica-Stevens Henager College"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Baton Rouge Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Lafayette Campus"
-}, {
-  "alias": " ",
-  "value": "University of Phoenix-Shreveport-Bossier Campus"
-}, {
+},    {
   "alias": " ",
   "value": "South University-Savannah Online"
-}, {
-  "alias": "Rio Grande Bible College ,Seminario Biblico Rio Grande",
-  "value": "Rio Grande Bible Institute"
-}, {
+},  {
   "alias": " ",
   "value": "Whitworth University-Adult Degree Programs"
 }, {
@@ -7537,10 +6827,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Yeshiva Gedolah Zichron Leyma"
-}, {
-  "alias": " ",
-  "value": "Be'er Yaakov Talmudic Seminary"
-}, {
+},  {
   "alias": " ",
   "value": "Colorado State University-Global Campus"
 }, {
@@ -7555,31 +6842,16 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Stevens-Henager College-St George"
-}, {
-  "alias": " ",
-  "value": "National American University-Bellevue"
-}, {
-  "alias": " ",
-  "value": "National American University-Burnsville"
-}, {
-  "alias": " ",
-  "value": "National American University-Mesquite"
-}, {
+},    {
   "alias": "National City Satellite",
   "value": "California College San Diego"
 }, {
   "alias": "San Marcos Branch Campus",
   "value": "California College San Diego"
-},           {
-  "alias": " ",
-  "value": "University of Phoenix-McAllen Campus"
-}, {
+},            {
   "alias": "Penn State",
   "value": "Pennsylvania State University-World Campus"
-}, {
-  "alias": " ",
-  "value": "Kaplan University-Augusta Campus"
-}, {
+},  {
   "alias": " ",
   "value": "South University-Austin"
 }, {
@@ -7612,13 +6884,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Rasmussen College-Kansas"
-}, {
-  "alias": "Salt Lake Bible College",
-  "value": "Salt Lake Baptist College"
-}, {
-  "alias": " ",
-  "value": "Manthano Christian College"
-}, {
+},   {
   "alias": " ",
   "value": "California Miramar University"
 }, {
@@ -7627,10 +6893,7 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Grace Mission University"
-}, {
-  "alias": " ",
-  "value": "Mid-South Christian College"
-}, {
+},  {
   "alias": " ",
   "value": "Grace School of Theology"
 }, {
@@ -7657,33 +6920,6 @@ var colleges = [{
 }, {
   "alias": " ",
   "value": "Virginia Baptist College"
-}, {
-  "alias": " ",
-  "value": "National American University-Austin South"
-}, {
-  "alias": " ",
-  "value": "National American University-Lewisville"
-}, {
-  "alias": " ",
-  "value": "National American University-Georgetown"
-}, {
-  "alias": " ",
-  "value": "National American University-Richardson"
-}, {
-  "alias": " ",
-  "value": "National American University-Rochester"
-}, {
-  "alias": " ",
-  "value": "National American University-Weldon Spring"
-}, {
-  "alias": " ",
-  "value": "National American University-Wichita West"
-}, {
-  "alias": " ",
-  "value": "National American University-Indianapolis"
-}, {
-  "alias": " ",
-  "value": "National American University-Tigard"
 }, {
   "alias": " ",
   "value": "The Art Institute of St Louis"
