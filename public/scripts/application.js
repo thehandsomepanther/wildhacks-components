@@ -73,7 +73,8 @@ var Dropdown = React.createClass({
   getInitialState: function() {
     return {
       focus: false,
-      selectedItem: 0
+      selectedItem: 0,
+      valid: this.props.custom
     };
   },
   componentDidMount: function() {
@@ -106,6 +107,7 @@ var Dropdown = React.createClass({
   },
   handleKeyDown: function(e) {
     e.nativeEvent.stopImmediatePropagation();
+
     switch(e.keyCode) {
       case 9: // tab key
       case 27: // escape key
@@ -131,6 +133,25 @@ var Dropdown = React.createClass({
     return;
   },
   render: function() {
+    if (!this.props.custom) {
+      for (var key in this.props.options) {
+        if(this.props.options[key].value == this.state.value) {
+          this.state.valid = true;
+          break;
+        } else {
+          this.state.valid = false;
+        }
+      }
+    }
+
+    var styles = {
+      width: 'inherit'
+    }
+
+    if (!this.state.valid && this.state.value) {
+      styles.borderBottom = '8px solid red';
+    }
+
     return (
       <div
         className='dropdown'
@@ -147,7 +168,7 @@ var Dropdown = React.createClass({
           onKeyDown={this.handleKeyDown}
           onTouchStart={this.handleFocus}
           onTouchEnd={this.handleBlur}
-          style={{width: 'inherit'}}
+          style={styles}
         ></input>
         <DropdownList
           re={this.state.value}
@@ -190,18 +211,13 @@ var Application = React.createClass({
   },
   handleSubmit: function(e) {
     e.preventDefault();
-    var firstName = this.state.firstName.trim(),
-        lastName = this.state.lastName.trim(),
-        year = this.state.year,
-        school = this.state.school,
-        email = this.state.email.trim();
 
     var app = {
-        firstName: firstName,
-        lastName: lastName,
-        year: year,
-        school: school,
-        email: email,
+        firstName: this.state.firstName.trim(),
+        lastName: this.state.lastName.trim(),
+        year: this.state.year,
+        school: this.state.school,
+        email: this.state.email.trim(),
         id: Date.now()
       };
 
@@ -250,6 +266,7 @@ var Application = React.createClass({
             value={this.state.year}
             onChange={this.handleYearChange}
             options={years}
+            custom={false}
             required/>
         </div>
         <div>
@@ -261,6 +278,7 @@ var Application = React.createClass({
             value={this.state.school}
             onChange={this.handleSchoolChange}
             options={colleges}
+            custom={true}
             required/>
         </div>
         <div>
