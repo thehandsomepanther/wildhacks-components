@@ -1,3 +1,78 @@
+var Input = React.createClass({
+  render: function() {
+    var inputClass = "dropdown-input "
+    inputClass += this.props.valid ? "valid" : "invalid";
+
+    return (
+      <input
+        className={inputClass}
+        id={this.props.id}
+        type={this.props.type}
+        placeholder={this.props.placeholder}
+        value={this.props.value}
+        valid={this.props.valid}
+        onChange={this.props.onChange}
+        onClick={this.props.onClick}
+        onFocus={this.props.onFocus}
+        onKeyDown={this.props.onKeyDown}
+        onTouchStart={this.props.onTouchStart}
+        onTouchEnd={this.props.handleBlur} >
+      </input>
+    )
+  }
+});
+
+var UserInput = React.createClass({
+  getInitialState: function() {
+    return {
+      focus: false,
+      valid: true
+    };
+  },
+  handleClick: function(e) {
+    e.nativeEvent.stopImmediatePropagation();
+  },
+  handleChange: function(e) {
+    this.setState({value: e.target.value});
+    this.props.onChange(e, e.target.value);
+  },
+  handleFocus: function() {
+    this.setState({focus: true});
+    return;
+  },
+  handleFocus: function() {
+    this.setState({focus: true});
+    return;
+  },
+  handleBlur: function() {
+    this.setState({focus: false});
+    return;
+  },
+  render: function() {
+
+    if (this.props.re) {
+      var re = new RegExp(this.props.re, "i");
+      this.state.valid = re.test(this.state.value)
+    }
+
+    return(
+      <Input
+        id={this.props.id}
+        type={this.props.type}
+        placeholder={this.props.placeholder}
+        value={this.state.value}
+        valid={this.state.valid}
+        onChange={this.handleChange}
+        onClick={this.handleClick}
+        onFocus={this.handleFocus}
+        onKeyDown={this.handleKeyDown}
+        onTouchStart={this.handleFocus}
+        onTouchEnd={this.handleBlur}
+      />
+    )
+  }
+});
+
 var DropdownItem = React.createClass({
   getInitialState: function() {
     return {
@@ -13,7 +88,8 @@ var DropdownItem = React.createClass({
     return;
   },
   render: function() {
-    var background = this.state.focus ? "blue" : "#ECEFF1";
+    var background = this.state.focus ? this.props.color : "#ECEFF1";
+    var color = this.state.focus ? "#ECEFF1" : this.props.color;
 
     return (
         <li
@@ -24,6 +100,7 @@ var DropdownItem = React.createClass({
           id={this.props.value}
           style={{
             backgroundColor: background,
+            color: color,
             listStyle: "none",
             paddingLeft: "10px"
           }}>
@@ -38,7 +115,7 @@ var DropdownList = React.createClass({
     return {};
   },
   render: function() {
-    var itemClick = this.props.onClick;
+    var that = this;
     var re = new RegExp(this.props.re, "i");
 
     var list = this.props.list.map(function(item, i) {
@@ -46,7 +123,8 @@ var DropdownList = React.createClass({
         return <DropdownItem
                   key={i}
                   value={item.value}
-                  onClick={itemClick} />
+                  color={that.props.color}
+                  onClick={that.props.onClick} />
       }
       return
     });
@@ -144,37 +222,30 @@ var Dropdown = React.createClass({
       }
     }
 
-    var styles = {
-      width: 'inherit'
-    }
-
-    if (!this.state.valid && this.state.value) {
-      styles.borderBottom = '8px solid red';
-    }
-
     return (
       <div
         className='dropdown'
         style={{display: 'inline-block'}}>
-        <input
+        <Input
           id={this.props.id}
-          className='dropdown-input'
           type={this.props.type}
           placeholder={this.props.placeholder}
           value={this.state.value}
+          valid={this.state.valid}
           onChange={this.handleChange}
           onClick={this.handleClick}
           onFocus={this.handleFocus}
           onKeyDown={this.handleKeyDown}
           onTouchStart={this.handleFocus}
           onTouchEnd={this.handleBlur}
-          style={styles}
-        ></input>
+        />
         <DropdownList
           re={this.state.value}
           list={this.props.options}
           display={this.state.focus}
-          onClick={this.handleDropdownListClick}/>
+          color={this.props.color}
+          onClick={this.handleDropdownListClick}
+        />
       </div>
     );
   }
@@ -217,22 +288,23 @@ var Application = React.createClass({
         lastName: this.state.lastName.trim(),
         year: this.state.year,
         school: this.state.school,
-        email: this.state.email.trim(),
-        id: Date.now()
+        email: this.state.email.trim()
       };
 
-    $.ajax({
-      url: this.props.url,
-      dataType: 'json',
-      type: 'POST',
-      data: app,
-      success: function(data) {
-        console.log('success');
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
+      console.log(app)
+
+    // $.ajax({
+    //   url: this.props.url,
+    //   dataType: 'json',
+    //   type: 'PUT',
+    //   data: app,
+    //   success: function(data) {
+    //     console.log('success');
+    //   }.bind(this),
+    //   error: function(xhr, status, err) {
+    //     console.error(this.props.url, status, err.toString());
+    //   }.bind(this)
+    // });
   },
 
   render: function() {
@@ -240,22 +312,22 @@ var Application = React.createClass({
       <form onSubmit={this.handleSubmit}>
         <div>
           <label htmlFor='first-name'>My name is</label>
-          <input
+          <UserInput
             id='first-name'
             className='input-text'
             type='text'
             placeholder='First'
             value={this.state.firstName}
             onChange={this.handleFirstNameChange}
-            required></input>
-          <input
+            required />
+          <UserInput
             id='last-name'
             className='input-text'
             type='text'
             placeholder='Last'
             value={this.state.lastName}
             onChange={this.handleLastNameChange}
-            required></input>
+            required />
         </div>
         <div>
           <label htmlFor='year'>and I&rsquo;m a</label>
@@ -279,18 +351,19 @@ var Application = React.createClass({
             onChange={this.handleSchoolChange}
             options={colleges}
             custom={true}
-            required/>
+            required />
         </div>
         <div>
           <label htmlFor='email'>My email is</label>
-          <input
+          <UserInput
             id='email'
             className='input-text'
             type='email'
             placeholder='Email'
             value={this.state.email}
             onChange={this.handleEmailChange}
-            required></input>
+            re='.*@.*\..*'
+            required />
         </div>
         <button type='submit'>And that&rsquo;s all I have to say about that</button>
       </form>
