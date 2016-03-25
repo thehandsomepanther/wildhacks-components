@@ -15,6 +15,45 @@ $primary-type: Circular, "Century Gothic" Arial, sans-serif;
   color: #0033cc;
 }
 
+// component styles
+
+.input {
+  border: none;
+  border-bottom: 8px solid $grey;
+  transition: all .1s linear;
+}
+
+.input:hover,
+.input:focus,
+.input.dirty.valid {
+  border-bottom: 8px solid $ik-blue;
+}
+
+.input.dirty.invalid {
+  border-bottom: 8px solid red;
+}
+
+.dropdown,
+.userinput {
+  display: inline-block;
+}
+
+.dropdown-item {
+  color: $ik-blue;
+  background-color: $blue-grey;
+}
+
+.dropdown-item:hover {
+  cursor: pointer;
+}
+
+.dropdown-item.focus {
+  color: $blue-grey;
+  background-color: $ik-blue;
+}
+
+// application-specific styles
+
 #application-container {
   margin-left: 15vw;
 }
@@ -29,10 +68,6 @@ h4 {
   text-align: center;
 }
 
-form div {
-
-}
-
 form div label {
   display: inline-block;
   text-align: right;
@@ -45,18 +80,7 @@ select option {
   font-size: 3em;
 }
 
-input {
-  border: none;
-  border-bottom: 8px solid $grey;
-  transition: all .1s linear;
-}
-
-input:hover,
-input:focus {
-  border-bottom: 8px solid $ik-blue;
-}
-
-.input-text,
+.userinput,
 .dropdown {
   margin-left: 1vw;
 }
@@ -72,7 +96,7 @@ select {
 }
 
 #first-name {
-  margin-right: 2vw;
+  margin-right: 1vw;
 }
 
 #first-name,

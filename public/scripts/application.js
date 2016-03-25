@@ -1,6 +1,16 @@
 var Input = React.createClass({
+  getInitialState: function() {
+    return {
+      clean: true
+    }
+  },
+  handleChange: function(e) {
+    this.setState({clean: false});
+    this.props.onChange(e);
+  },
   render: function() {
-    var inputClass = "dropdown-input "
+    var inputClass = "input "
+    inputClass += this.state.clean ? "clean " : "dirty ";
     inputClass += this.props.valid ? "valid" : "invalid";
 
     return (
@@ -11,7 +21,7 @@ var Input = React.createClass({
         placeholder={this.props.placeholder}
         value={this.props.value}
         valid={this.props.valid}
-        onChange={this.props.onChange}
+        onChange={this.handleChange}
         onClick={this.props.onClick}
         onFocus={this.props.onFocus}
         onKeyDown={this.props.onKeyDown}
@@ -56,19 +66,21 @@ var UserInput = React.createClass({
     }
 
     return(
-      <Input
-        id={this.props.id}
-        type={this.props.type}
-        placeholder={this.props.placeholder}
-        value={this.state.value}
-        valid={this.state.valid}
-        onChange={this.handleChange}
-        onClick={this.handleClick}
-        onFocus={this.handleFocus}
-        onKeyDown={this.handleKeyDown}
-        onTouchStart={this.handleFocus}
-        onTouchEnd={this.handleBlur}
-      />
+      <div className="userinput">
+        <Input
+          id={this.props.id}
+          type={this.props.type}
+          placeholder={this.props.placeholder}
+          value={this.state.value}
+          valid={this.state.valid}
+          onChange={this.handleChange}
+          onClick={this.handleClick}
+          onFocus={this.handleFocus}
+          onKeyDown={this.handleKeyDown}
+          onTouchStart={this.handleFocus}
+          onTouchEnd={this.handleBlur}
+        />
+      </div>
     )
   }
 });
@@ -88,19 +100,17 @@ var DropdownItem = React.createClass({
     return;
   },
   render: function() {
-    var background = this.state.focus ? this.props.color : "#ECEFF1";
-    var color = this.state.focus ? "#ECEFF1" : this.props.color;
+    var dropdownItemClass = "dropdown-item "
+    dropdownItemClass += this.state.focus ? "focus" : "";
 
     return (
         <li
-          className='dropdown-item'
+          className={dropdownItemClass}
           onMouseOver={this.handleMouseOver}
           onMouseLeave={this.handleMouseLeave}
           onClick={this.props.onClick}
           id={this.props.value}
           style={{
-            backgroundColor: background,
-            color: color,
             listStyle: "none",
             paddingLeft: "10px"
           }}>
@@ -123,7 +133,6 @@ var DropdownList = React.createClass({
         return <DropdownItem
                   key={i}
                   value={item.value}
-                  color={that.props.color}
                   onClick={that.props.onClick} />
       }
       return
@@ -223,9 +232,7 @@ var Dropdown = React.createClass({
     }
 
     return (
-      <div
-        className='dropdown'
-        style={{display: 'inline-block'}}>
+      <div className='dropdown' >
         <Input
           id={this.props.id}
           type={this.props.type}
@@ -243,7 +250,6 @@ var Dropdown = React.createClass({
           re={this.state.value}
           list={this.props.options}
           display={this.state.focus}
-          color={this.props.color}
           onClick={this.handleDropdownListClick}
         />
       </div>
@@ -309,12 +315,13 @@ var Application = React.createClass({
 
   render: function() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        onSubmit={this.handleSubmit}
+        className="application" >
         <div>
           <label htmlFor='first-name'>My name is</label>
           <UserInput
             id='first-name'
-            className='input-text'
             type='text'
             placeholder='First'
             value={this.state.firstName}
@@ -322,7 +329,6 @@ var Application = React.createClass({
             required />
           <UserInput
             id='last-name'
-            className='input-text'
             type='text'
             placeholder='Last'
             value={this.state.lastName}
