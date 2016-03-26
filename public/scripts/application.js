@@ -1,16 +1,11 @@
 var Input = React.createClass({
-  getInitialState: function() {
-    return {
-      clean: true
-    }
-  },
   handleChange: function(e) {
     this.setState({clean: false});
     this.props.onChange(e);
   },
   render: function() {
     var inputClass = "input "
-    inputClass += this.state.clean ? "clean " : "dirty ";
+    inputClass += this.props.clean ? "clean " : "dirty ";
     inputClass += this.props.valid ? "valid" : "invalid";
 
     return (
@@ -36,7 +31,8 @@ var UserInput = React.createClass({
   getInitialState: function() {
     return {
       focus: false,
-      valid: true
+      valid: true,
+      clean: true
     };
   },
   handleClick: function(e) {
@@ -44,6 +40,7 @@ var UserInput = React.createClass({
   },
   handleChange: function(e) {
     this.setState({value: e.target.value});
+    this.setState({clean: false});
     this.props.onChange(e, e.target.value);
   },
   handleFocus: function() {
@@ -79,6 +76,7 @@ var UserInput = React.createClass({
           onKeyDown={this.handleKeyDown}
           onTouchStart={this.handleFocus}
           onTouchEnd={this.handleBlur}
+          clean={true}
         />
       </div>
     )
@@ -161,7 +159,8 @@ var Dropdown = React.createClass({
     return {
       focus: false,
       selectedItem: 0,
-      valid: this.props.custom
+      valid: this.props.custom,
+      clean: true
     };
   },
   componentDidMount: function() {
@@ -177,6 +176,7 @@ var Dropdown = React.createClass({
     e.nativeEvent.stopImmediatePropagation();
   },
   handleChange: function(e) {
+    this.setState({clean: false});
     this.setState({value: e.target.value});
     this.props.onChange(e, e.target.value);
   },
@@ -215,6 +215,7 @@ var Dropdown = React.createClass({
     }
   },
   handleDropdownListClick: function(e) {
+    this.setState({clean: false});
     this.setState({value: e.target.id});
     this.props.onChange(e, e.target.id);
     return;
@@ -239,6 +240,7 @@ var Dropdown = React.createClass({
           placeholder={this.props.placeholder}
           value={this.state.value}
           valid={this.state.valid}
+          clean={this.state.clean}
           onChange={this.handleChange}
           onClick={this.handleClick}
           onFocus={this.handleFocus}
