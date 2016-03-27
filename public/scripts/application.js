@@ -105,12 +105,13 @@ var DropdownItem = React.createClass({
           onMouseLeave={this.handleMouseLeave}
           onClick={this.props.onClick}
           onKeyDown={this.handleKeyDown}
-          id={this.props.value}
+          id={this.props.id}
+          value={this.props.value}
           style={{
             listStyle: "none",
             paddingLeft: "10px"
           }}>
-          {this.props.value}
+          {this.props.id}
         </li>
     )
   }
@@ -118,21 +119,38 @@ var DropdownItem = React.createClass({
 
 var DropdownList = React.createClass({
   getInitialState: function() {
-    return {};
+    return {
+      selectedItem: this.props.selectedItem,
+      mouse: false
+    };
+  },
+  handleMouseOver: function(e) {
+    this.setState({mouse: true});
+    this.setState({selectedItem: e.target.value});
+    return;
+  },
+  handleMouseLeave: function(e) {
+    this.setState({mouse: false});
+    this.setState({selectedItem: this.props.selectedItem});
+    return;
+  },
+  handleKeyDown: function(e) {
+    this.props.onKeyDown(e);
+    return;
   },
   render: function() {
     var that = this;
     var re = new RegExp(this.props.re, "i");
     var index = 0;
+    var select = this.state.mouse ? this.state.selectedItem : this.props.selectedItem;
     var list = this.props.list.map(function(item, i) {
       if (re.test(item.value) || re.test(item.alias)) {
-        var focus = (that.props.selectedItem == index) ? true : false;
+        var focus = (select == index) ? true : false;
         return <DropdownItem
                   key={i}
-                  index={index++}
-                  value={item.value}
+                  value={index++}
+                  id={item.value}
                   focus={focus}
-                  onKeyDown={that.props.onKeyDown}
                   onClick={that.props.onClick} />
       }
       return
@@ -149,7 +167,9 @@ var DropdownList = React.createClass({
           height: '60px',
           marginTop: "0",
           display: show
-        }}>
+        }}
+        onMouseOver={this.handleMouseOver}
+        onMouseLeave={this.handleMouseLeave} >
         {list}
       </ul>
     );
@@ -196,6 +216,10 @@ var Dropdown = React.createClass({
   },
   handleKeyDown: function(e) {
     e.nativeEvent.stopImmediatePropagation();
+    var dropdownList = document.getElementsByClassName('dropdown ' + this.props.id)[0]
+                               .getElementsByClassName('dropdown-list')[0];
+    var dropdownListItem = document.getElementsByClassName('dropdown ' + this.props.id)[0]
+                                   .getElementsByClassName('dropdown-item focus')[0];
 
     switch(e.keyCode) {
       case 9:   // tab key
