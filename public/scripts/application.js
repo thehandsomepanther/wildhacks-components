@@ -85,9 +85,7 @@ var UserInput = React.createClass({
 
 var DropdownItem = React.createClass({
   getInitialState: function() {
-    return {
-      focus: false
-    };
+    return {};
   },
   handleMouseOver: function() {
     this.setState({focus: true});
@@ -99,14 +97,14 @@ var DropdownItem = React.createClass({
   },
   render: function() {
     var dropdownItemClass = "dropdown-item "
-    dropdownItemClass += this.state.focus ? "focus" : "";
-
+    dropdownItemClass += this.props.focus ? "focus" : "";
     return (
         <li
           className={dropdownItemClass}
           onMouseOver={this.handleMouseOver}
           onMouseLeave={this.handleMouseLeave}
           onClick={this.props.onClick}
+          onKeyDown={this.handleKeyDown}
           id={this.props.value}
           style={{
             listStyle: "none",
@@ -125,12 +123,16 @@ var DropdownList = React.createClass({
   render: function() {
     var that = this;
     var re = new RegExp(this.props.re, "i");
-
+    var index = 0;
     var list = this.props.list.map(function(item, i) {
       if (re.test(item.value) || re.test(item.alias)) {
+        var focus = (that.props.selectedItem == index) ? true : false;
         return <DropdownItem
                   key={i}
+                  index={index++}
                   value={item.value}
+                  focus={focus}
+                  onKeyDown={that.props.onKeyDown}
                   onClick={that.props.onClick} />
       }
       return
@@ -169,7 +171,7 @@ var Dropdown = React.createClass({
   componentWillUnmount: function() {
     document.removeEventListener("click", this.documentClickHandler);
   },
-  documentClickHandler: function() {
+  documentClickHandler: function(e) {
     this.setState({focus: false});
   },
   handleClick: function(e) {
@@ -196,21 +198,38 @@ var Dropdown = React.createClass({
     e.nativeEvent.stopImmediatePropagation();
 
     switch(e.keyCode) {
-      case 9: // tab key
-      case 27: // escape key
+      case 9:   // tab key
+      case 27:  // escape key
         this.setState({focus: false});
         break;
 
-      case 38: // up arrow
+      case 38:  // up arrow
         if (this.state.selectedItem > 0) {
           this.setState({selectedItem: --this.state.selectedItem});
         }
         break;
 
-      case 40: // down arrow
-        if (this.state.selectedItem < this.props.options.length) {
+      case 40:  // down arrow
+        if (this.state.selectedItem < this.props.options.length - 1) {
           this.setState({selectedItem: ++this.state.selectedItem});
         }
+        break;
+
+      case 13:  // enter key
+        this.handleDropdownListKeyDown(e);
+        break;
+    }
+  },
+  handleDropdownListKeyDown: function(e) {
+    e.preventDefault();
+    switch(e.keyCode) {
+      case 13:  // enter key
+        this.setState({clean: false});
+        this.setState({
+          value: document.getElementsByClassName('dropdown ' + this.props.id)[0]
+                         .getElementsByClassName('dropdown-item focus')[0].id
+        });
+        this.setState({selectedItem: 0});
         break;
     }
   },
@@ -233,7 +252,7 @@ var Dropdown = React.createClass({
     }
 
     return (
-      <div className='dropdown' >
+      <div className={'dropdown ' + this.props.id } >
         <Input
           id={this.props.id}
           type={this.props.type}
@@ -252,7 +271,9 @@ var Dropdown = React.createClass({
           re={this.state.value}
           list={this.props.options}
           display={this.state.focus}
+          selectedItem={this.state.selectedItem}
           onClick={this.handleDropdownListClick}
+          onKeyDown={this.handleDropdownListKeyDown}
         />
       </div>
     );
