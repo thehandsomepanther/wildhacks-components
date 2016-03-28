@@ -333,6 +333,24 @@ var Application = React.createClass({
   handleEmailChange: function(e) {
     this.setState({email: e.target.value});
   },
+  handleGenderChange: function(e) {
+    this.setState({gender: e.target.value});
+  },
+  handleShirtChange: function(e) {
+    this.setState({shirt: e.target.value});
+  },
+  handleTravelChange: function(e) {
+    this.setState({travel: e.target.value});
+  },
+  handleDietChange: function(e) {
+    this.setState({diet: e.target.value});
+  },
+  handleGithubChange: function(e) {
+    this.setState({github: e.target.value});
+  },
+  handlePersonalChange: function(e) {
+    this.setState({personal: e.target.value});
+  },
   handleSubmit: function(e) {
     e.preventDefault();
 
@@ -341,7 +359,13 @@ var Application = React.createClass({
         lastName: this.state.lastName.trim(),
         year: this.state.year,
         school: this.state.school,
-        email: this.state.email.trim()
+        email: this.state.email.trim(),
+        gender: this.state.gender.trim(),
+        shirt: this.shirt.email.trim(),
+        travel: this.travel.email.trim(),
+        diet: this.diet.email.trim(),
+        github: this.githubc.email.trim(),
+        personal: this.personal.email.trim()
       };
 
       console.log(app)
@@ -410,12 +434,99 @@ var Application = React.createClass({
           <label htmlFor='email'>My email is</label>
           <UserInput
             id='email'
-            className='input-text'
             type='email'
             placeholder='Email'
             value={this.state.email}
             onChange={this.handleEmailChange}
             re='.*@.*\..*'
+            required />
+        </div>
+        <div>
+          <label htmlFor='phone'>My number is</label>
+          <UserInput
+            id='phone'
+            type='text'
+            placeholder='XXX-XXX-XXXX'
+            value={this.state.phone}
+            onChange={this.handlePhoneChange}
+            re='.*@.*\..*'
+            required />
+        </div>
+        <div>
+          <label htmlFor='gender'>I identify as</label>
+          <Dropdown
+            id='gender'
+            type='text'
+            placeholder='Gender'
+            value={this.state.gender}
+            onChange={this.handleGenderChange}
+            options={[
+              {value: "male", alias: "boy"},
+              {value: "female", alias: "girl"},
+              {value: "other", alias: ""}
+            ]}
+            required />
+        </div>
+        <div>
+          <label htmlFor='shirt'>I wear a size</label>
+          <Dropdown
+            id='shirt'
+            type='text'
+            placeholder='Shirt Size'
+            value={this.state.shirt}
+            onChange={this.handleShirtChange}
+            options={[
+              {value: "XS", alias: "extra small"},
+              {value: "S", alias: "small"},
+              {value: "M", alias: "medium"},
+              {value: "L", alias: "large"},
+              {value: "XL", alias: "extra large"},
+              {value: "XXL", alias: "double extra large"},
+            ]}
+            required />
+        </div>
+        <div>
+          <label htmlFor='travel'>I will need travel reimbursement</label>
+          <Dropdown
+            id='travel'
+            type='text'
+            placeholder='Will/Will Not'
+            value={this.state.travel}
+            onChange={this.handleTravelChange}
+            options={[
+              {value: "Will", alias: "yes"},
+              {value: "Will Not", alias: "no"}
+            ]}
+            required />
+        </div>
+        <div>
+          <label htmlFor='diet'>My dietary restrictions include</label>
+          <UserInput
+            id='diet'
+            type='text'
+            placeholder='food'
+            value={this.state.diet}
+            onChange={this.handleDietChange} />
+        </div>
+        <div>
+          <label htmlFor='github'>My Github handle is</label>
+          <UserInput
+            id='github'
+            type='text'
+            placeholder='github.com/thehandsomepanther'
+            value={this.state.github}
+            re='github\.com\/.*'
+            onChange={this.handleGithubChange} />
+        </div>
+        <div>
+          <label htmlFor='personal'>You can find my personal website at</label>
+          <UserInput
+            id='personal'
+            type='text'
+            placeholder='joshshi.com'
+            value={this.state.personal}
+            onChange={this.handlePersonalChange}
+            re='.*\..*'
             required />
         </div>
         <button type='submit'>And that&rsquo;s all I have to say about that</button>
