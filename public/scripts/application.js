@@ -27,7 +27,7 @@ var Input = React.createClass({
   }
 });
 
-var UserInput = React.createClass({
+var Text = React.createClass({
   getInitialState: function() {
     return {
       focus: false,
@@ -63,7 +63,7 @@ var UserInput = React.createClass({
     }
 
     return(
-      <div className="userinput">
+      <div className="text">
         <Input
           id={this.props.id}
           type={this.props.type}
@@ -391,14 +391,14 @@ var Application = React.createClass({
         className="application" >
         <div>
           <label htmlFor='first-name'>My name is</label>
-          <UserInput
+          <Text
             id='first-name'
             type='text'
             placeholder='First'
             value={this.state.firstName}
             onChange={this.handleFirstNameChange}
             required />
-          <UserInput
+          <Text
             id='last-name'
             type='text'
             placeholder='Last'
@@ -432,7 +432,7 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='email'>My email is</label>
-          <UserInput
+          <Text
             id='email'
             type='email'
             placeholder='Email'
@@ -443,7 +443,7 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='phone'>My number is</label>
-          <UserInput
+          <Text
             id='phone'
             type='text'
             placeholder='XXX-XXX-XXXX'
@@ -501,7 +501,7 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='diet'>My dietary restrictions include</label>
-          <UserInput
+          <Text
             id='diet'
             type='text'
             placeholder='food'
@@ -510,7 +510,7 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='github'>My Github handle is</label>
-          <UserInput
+          <Text
             id='github'
             type='text'
             placeholder='github.com/thehandsomepanther'
@@ -520,7 +520,7 @@ var Application = React.createClass({
         </div>
         <div>
           <label htmlFor='personal'>You can find my personal website at</label>
-          <UserInput
+          <Text
             id='personal'
             type='text'
             placeholder='joshshi.com'

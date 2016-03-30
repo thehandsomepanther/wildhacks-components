@@ -21,7 +21,7 @@
   border-bottom: 8px solid red; }
 
 .dropdown,
-.userinput {
+.text {
   display: inline-block; }
 
 .dropdown-item {
@@ -56,7 +56,7 @@ input,
 select option {
   font-size: 3em; }
 
-.userinput,
+.text,
 .dropdown {
   margin-left: 1vw; }
 
